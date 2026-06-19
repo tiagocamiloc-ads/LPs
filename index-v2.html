@@ -163,9 +163,13 @@
     .ab-sec img{width:100%;height:100%;object-fit:cover;display:block}
     .about-txt h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);margin-bottom:20px;line-height:1.05}
     .about-txt p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
-    .about-stats{display:flex;gap:32px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border);flex-wrap:wrap}
-    .as-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--navy);line-height:1;margin-bottom:4px}
-    .as-lbl{font-size:.78rem;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+    .about-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;padding-top:32px;border-top:1px solid var(--border)}
+    .about-stats>div{padding:0 24px}
+    .about-stats>div:first-child{padding-left:0}
+    .about-stats>div:last-child{padding-right:0}
+    .about-stats>div:not(:last-child){border-right:1px solid var(--border)}
+    .as-num{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--navy);line-height:1;margin-bottom:6px}
+    .as-lbl{font-size:.78rem;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 
     /* ══════════════════════════════════
        PARTNERS
@@ -439,7 +443,7 @@
       .about-photos{height:220px;margin-bottom:40px}
       .ab-main{position:relative;width:100%;height:100%}
       .ab-sec{display:none}
-      .about-stats{gap:16px}
+      .about-stats>div{padding:0 12px}
       .as-num{font-size:2rem}
 
       /* Partners */
