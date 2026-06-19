@@ -173,9 +173,9 @@
     #partners{background:var(--grey);padding:56px 0}
     .pt-lbl{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
     .pt-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px}
-    .pt-badge{display:flex;align-items:center;gap:9px;padding:12px 22px;background:var(--white);border-radius:12px;border:1.5px solid var(--border);font-weight:700;font-size:.83rem;color:var(--muted);transition:all .2s;cursor:default}
-    .pt-badge:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
-    .pt-badge svg{width:18px;height:18px;flex-shrink:0}
+    .pt-badge{display:flex;align-items:center;justify-content:center;padding:14px 24px;background:var(--white);border-radius:12px;border:1.5px solid var(--border);transition:all .2s;cursor:default}
+    .pt-badge:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 4px 16px rgba(14,122,154,.12)}
+    .pt-badge img{max-height:44px;max-width:200px;height:auto;width:auto;display:block;object-fit:contain}
 
     /* ══════════════════════════════════
        CATEGORIES
@@ -440,7 +440,8 @@
 
       /* Partners */
       #partners{padding:40px 0}
-      .pt-badge{padding:10px 14px;font-size:.77rem;gap:7px}
+      .pt-badge{padding:10px 16px}
+      .pt-badge img{max-height:36px;max-width:160px}
 
       /* Categories */
       .cats-grid{grid-template-columns:repeat(2,1fr);gap:14px}
@@ -648,28 +649,22 @@
     <p class="pt-lbl">Reconhecidos e certificados por</p>
     <div class="pt-grid">
       <div class="pt-badge rv d1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
-        Erasmus+
+        <img src="assets/erasmusplus.jpg" alt="Erasmus+" />
       </div>
       <div class="pt-badge rv d2">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Eco-Escolas
+        <img src="assets/ecoescolas.png" alt="Eco-Escolas" />
       </div>
       <div class="pt-badge rv d3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-        ANQEP
+        <img src="assets/anqep.svg" alt="ANQEP" />
       </div>
       <div class="pt-badge rv d4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        Município da Lousã
+        <img src="assets/cm-lousa.svg" alt="Município da Lousã" />
       </div>
       <div class="pt-badge rv d1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        Active Citizens Fund
+        <img src="assets/acf.png" alt="Active Citizens Fund" />
       </div>
       <div class="pt-badge rv d2">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        Min. Educação
+        <img src="assets/minedu.png" alt="Ministério da Educação" />
       </div>
     </div>
   </div>

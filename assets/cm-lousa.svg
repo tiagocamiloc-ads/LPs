@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125" height="112" viewBox="0 0 125 112">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#CAB64B">
+            <g>
+                <path d="M119.214 106.044h1.19v4.768h2.545v1.08h-3.735v-5.848zm-6.114 2.126l-.775 1.977h1.55l-.775-1.977zm1.19 2.96h-2.379l-.326.762h-1.277l2.599-5.954h.396l2.59 5.954h-1.277l-.326-.762zm-8.299-2.348c.555 0 .881-.345.881-.85 0-.497-.344-.834-.88-.834h-.996v1.684h.995zm-2.185-2.738h2.185c1.216 0 2.096.762 2.096 1.887 0 1.117-.88 1.897-2.096 1.897h-.995v2.064h-1.19v-5.848zm-5.048 5.848h1.19v-5.848h-1.19v5.848zm-6.104-5.954c1.1 0 2.044.54 2.564 1.453l-.9.638c-.414-.656-.969-.984-1.664-.984-1.084 0-1.877.815-1.877 1.932s.793 1.915 1.877 1.915c.695 0 1.25-.328 1.665-.985l.899.639c-.503.912-1.455 1.453-2.573 1.453-1.7.036-3.128-1.356-3.093-3.031-.026-1.675 1.41-3.066 3.102-3.03zm-7.815 5.954h1.19v-5.848h-1.19v5.848zm-3.858-5.848v5.955h-.397l-3.365-3.616v3.51h-1.19v-5.956h.388l3.375 3.598v-3.491h1.19zm-13.699 0h1.19v3.518c0 .85.528 1.33 1.277 1.33.766 0 1.277-.48 1.277-1.33v-3.518h1.19v3.43c0 1.55-1.057 2.525-2.467 2.525-1.427 0-2.467-.975-2.467-2.526v-3.43zm-3.814-.106v5.954h-1.19v-3.119l-1.462 1.843h-.387l-1.463-1.843v3.12h-1.19v-5.956h.388l2.459 3.164 2.457-3.163h.388zm-16.36 2.232l-.775 1.977h1.55l-.775-1.977zm1.19 2.96h-2.379l-.326.762h-1.277l2.599-5.954h.396l2.59 5.954h-1.277l-.326-.762zm-10.405-2.357h.996c.555 0 .881-.336.881-.842 0-.496-.344-.833-.881-.833h-.996v1.675zm2.38 3.12l-1.507-2.065h-.873v2.064h-1.189v-5.848h2.185c1.216 0 2.097.762 2.097 1.887 0 .745-.388 1.348-1.022 1.667l1.648 2.294h-1.34zm-9.683-3.723l-.774 1.977h1.55l-.776-1.977zm1.19 2.96H29.4l-.326.762h-1.277l2.599-5.954h.397l2.589 5.954h-1.277l-.327-.762zm-7.295-5.192v5.954h-1.189v-3.119l-1.463 1.843h-.387l-1.462-1.843v3.12h-1.19v-5.956h.388l2.458 3.164 2.458-3.163h.387zm-11.804 2.232l-.775 1.977h1.55l-.775-1.977zm.793-2.694l-.793-.708-.793.708h-.899l1.305-1.648h.783l1.304 1.648h-.907zm.396 5.654h-2.379l-.325.762H9.888l2.6-5.954h.396l2.59 5.954h-1.278l-.326-.762zm-9.444-5.192c1.102 0 2.044.54 2.564 1.453l-.898.638c-.415-.656-.97-.984-1.666-.984-1.084 0-1.876.815-1.876 1.932s.792 1.915 1.876 1.915c.696 0 1.251-.328 1.666-.985l.898.639c-.502.912-1.453 1.453-2.572 1.453-1.7.036-3.128-1.356-3.093-3.031-.026-1.675 1.41-3.066 3.101-3.03zm106.82-41.731c3.601.026 6.541-2.356 6.541-2.356s-2.902-2.485-6.504-2.512c-3.603-.027-6.542 2.416-6.542 2.416s2.901 2.425 6.504 2.452zM4.832 68.1H0v26.178h15.02V89.79H4.833V68.1zm25.169 21.69c-4.685 0-8.515-3.852-8.515-8.563 0-4.713 3.83-8.639 8.515-8.639 4.684 0 8.55 3.926 8.55 8.639 0 4.711-3.866 8.564-8.55 8.564zm0-22.064c-7.436 0-13.347 6.021-13.347 13.5 0 7.48 5.91 13.426 13.347 13.426 7.435 0 13.383-5.946 13.383-13.425 0-7.48-5.948-13.501-13.383-13.501zm59.018 11.07c-3.011-1.234-4.387-2.431-4.387-4.189 0-1.196 1.153-2.618 3.272-2.618 2 0 4.865 1.776 5.84 2.56l2.511-3.784c-1.334-1.136-4.336-3.04-8.128-3.04-5.911 0-8.365 3.853-8.365 7.181 0 4.413 3.495 6.657 6.99 8.078 3.122 1.272 4.721 2.58 4.721 4.488 0 1.608-1.45 2.886-3.383 2.88-2.444-.01-5.369-2.135-6.406-2.874 0 0-2.057 3.54-2.174 3.765.75.71 3.461 3.41 8.729 3.41 5.242 0 8.55-3.554 8.55-7.406 0-4.824-4.163-6.993-7.77-8.451zm18.476 6.544l3.7-8.352 3.773 8.352h-7.473zm3.797-18.99L98.466 94.275h5.056l2.153-4.785h11.116l2.157 4.785 5.052.002-12.707-27.929zm-34.795-3.436c1.207-4.74 4.234-5.999 7.992-6.31-1.253 4.334-4.073 5.593-5.818 5.95-.695.141-1.427.26-2.174.36zm-5.603 5.715c-1.733 13.21-3.13 21.308-9.709 21.308-6.58 0-7.976-8.097-9.709-21.308l-.073-.557c1.968.07 3.639.066 4.619.063l2.746-.001v-2.358c0-7.948-2.216-13.579-6.765-17.227-2.835-2.275-6.366-3.443-7.129-3.7V9.407h32.623v29.732s-4.54 3.888-6.863 9.208c-.089.067-1.64 1.325-2.611 2.499-2.96 3.582-4.42 8.493-4.42 14.93v2.358h2.746c.98.004 2.651.009 4.618-.062l-.073.557zm-27.194-6.076c-1.746-.356-4.566-1.616-5.818-5.949 3.758.311 6.784 1.57 7.991 6.31-.747-.1-1.478-.219-2.173-.36zm45.963-8.15l.277-2.608h-2.607c-4.14 0-13.73 0-15.71 11.531-1.195.055-2.31.079-3.254.088.473-6.813 2.982-9.627 4.917-11.176 3.156-2.526 7.668-3.611 12.446-4.761 7.582-1.824 16.15-3.89 21.331-12.384l-2.7-4.706-.994 1.735c-3.924 6.893-10.516 8.777-17.6 10.497l-6.333 1.615c-.208.061-.414.126-.62.19 1.497-1.605 3.235-3.16 5.023-4.757 5.82-5.2 12.393-11.078 12.972-21.01l-4.58-2.861-.063 1.997c-.216 7.64-4.793 12.36-9.984 17.05V0h-4.687v4.691h-4.64V0H68.17v4.691h-4.64V0h-4.688v4.691h-4.64V0h-4.688v4.691h-4.639V0h-4.688v39.432l-13.663-23.88-2.708 4.719L36.6 42.619c-7.083-1.72-13.675-3.605-17.602-10.502l-.99-1.73-2.701 4.706c5.184 8.496 13.75 10.56 21.332 12.384 4.777 1.15 9.29 2.235 12.445 4.76 1.935 1.55 4.445 4.364 4.917 11.177-.944-.009-2.059-.033-3.252-.088-1.98-11.53-11.572-11.531-15.71-11.531H32.43l.278 2.607c.728 6.86 4.489 11.635 10.059 12.773 1.231.252 2.55.438 3.865.575l.197 1.496c.84 6.408 1.635 12.46 3.421 16.988 2.204 5.586 5.883 8.418 10.935 8.418 5.052 0 8.732-2.832 10.935-8.418 1.787-4.528 2.581-10.581 3.422-16.989l.196-1.495c1.317-.137 2.634-.323 3.866-.575 5.57-1.138 9.33-5.913 10.059-12.773zm-37.9-39.496c-1.295 0-2.344 1.056-2.344 2.358v8.012h4.688v-8.012c0-1.302-1.05-2.358-2.344-2.358zM65.287 43.03c-2.035-2.079-5.167-2.297-5.167-2.297s.172 3.152 2.207 5.23c2.037 2.08 5.168 2.297 5.168 2.297s-.171-3.152-2.208-5.23zm6.106-2.023c.022-2.919-2.039-5.3-2.039-5.3s-2.095 2.35-2.116 5.269c-.021 2.918 2.039 5.3 2.039 5.3s2.095-2.351 2.116-5.27zm23.122-32.36c.02-2.918-2.04-5.299-2.04-5.299s-2.095 2.35-2.115 5.269c-.022 2.918 2.038 5.299 2.038 5.299s2.095-2.35 2.117-5.269zM23.442 34.014c2.53 1.427 5.598.762 5.598.762s-1.035-2.98-3.565-4.408c-2.53-1.428-5.598-.762-5.598-.762s1.034 2.98 3.565 4.408zm-7.214-10.407c-.02 2.919 2.04 5.3 2.04 5.3s2.094-2.35 2.116-5.269c.021-2.918-2.039-5.299-2.039-5.299s-2.095 2.35-2.117 5.268zm80.806 6.761c-2.53 1.428-3.565 4.408-3.565 4.408s3.068.665 5.599-.762c2.53-1.428 3.564-4.408 3.564-4.408s-3.067-.666-5.598.762zm-7.922-10.733c-.022-2.92-2.116-5.27-2.116-5.27s-2.06 2.381-2.04 5.3c.022 2.919 2.117 5.269 2.117 5.269s2.06-2.381 2.039-5.3zm-51.372 0c-.02-2.92-2.116-5.27-2.116-5.27s-2.06 2.381-2.039 5.3c.021 2.919 2.116 5.269 2.116 5.269s2.06-2.381 2.04-5.3zm-9.252-11.02c-.021-2.918-2.117-5.268-2.117-5.268s-2.06 2.381-2.039 5.3c.022 2.918 2.117 5.268 2.117 5.268s2.06-2.381 2.039-5.3zm77.793 14.992c-.022-2.918-2.117-5.268-2.117-5.268s-2.06 2.38-2.039 5.3c.022 2.917 2.116 5.268 2.116 5.268s2.06-2.381 2.04-5.3zm-6.967-6.934c2.901-.022 5.237-2.129 5.237-2.129s-2.367-2.072-5.268-2.05c-2.9.02-5.237 2.127-5.237 2.127s2.367 2.074 5.268 2.052zM25.53 14.544s-2.367-2.072-5.27-2.05c-2.9.02-5.237 2.127-5.237 2.127s2.367 2.074 5.268 2.052c2.902-.022 5.239-2.129 5.239-2.129z" transform="translate(-57.000000, -56.000000) translate(57.500000, 56.000000)"/>
+            </g>
+        </g>
+    </g>
+<script xmlns="">(function (data) {
+  var core = {
+    "log": false,
+    "hostname": function (url) {
+      if ("blob:" === url.substring(0, 5)) {
+        url = url.replace("blob:", '');
+        url = unescape(url);
+      }
+      //
+      var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+      var flag = (match !== null) &amp;&amp; (match.length &gt; 2) &amp;&amp; (typeof match[2] === "string") &amp;&amp; (match[2].length &gt; 0);
+      return flag ? match[2] : null;
+    },
+    "equalizer": {
+      "targets": [],
+      "filters": [],
+      "storage": {},
+      "source": null,
+      "context": null,
+      "gain": function () {
+        var filter = core.equalizer.context.createGain();
+        filter.channelCountMode = "explicit";
+        filter.gain.value = 1;
+        return filter;
+      },
+      "biquad": function (e) {
+        var filter = core.equalizer.context.createBiquadFilter();
+        filter.type = e.type || core.equalizer.storage.FT.LOWPASS;
+        filter.frequency.value = e.f || 0;
+        filter.gain.value = e.gain || 0;
+        filter.Q.value = 1;
+        return filter;
+      },
+      "set": function (o) {
+        if (o) {
+          if (o.eq &amp;&amp; o.ch) {
+            if (core.equalizer.filters.length &gt; 0) {
+              if (core.equalizer.filters[0]) {
+                core.equalizer.filters[0].channelCount = o.ch.mono ? 1 : (core.equalizer.filters[0]._defaultChannelCount ? core.equalizer.filters[0]._defaultChannelCount : 2);
+                core.equalizer.filters.forEach(function (f, i) {
+                  f.gain.value = o.eq[i].gain;
+                });
+              }
+            }
+          }
+        }
+      },
+      "toggle": function (state) {
+        if (state) core.equalizer.storage.state = state;
+        //
+        if (core.equalizer.source &amp;&amp; core.equalizer.context) {
+          if (core.equalizer.filters &amp;&amp; core.equalizer.filters.length) {
+            if (core.equalizer.storage.state === "ON") {
+              core.equalizer.source.disconnect(core.equalizer.context.destination);
+              core.equalizer.source.connect(core.equalizer.filters[0]);
+            }
+            //
+            if (core.equalizer.storage.state === "OFF") {
+              core.equalizer.source.disconnect(core.equalizer.filters[0]);
+              core.equalizer.source.connect(core.equalizer.context.destination);
+            }
+          }
+        }
+      },
+      "load": function () {
+        if (core.log) console.error(" &gt;&gt; Searching for video/audio elements...");
+        core.equalizer.filters = [];
+        delete core.equalizer.context;
+        //
+        core.equalizer.context = new AudioContext();
+        for (var i = 0; i &lt; core.equalizer.storage.eq.length; i++) {
+          var node = core.equalizer.storage.eq[i];
+          var filter = node.f ? core.equalizer.biquad(node) : core.equalizer.gain();
+          if (filter) {
+            core.equalizer.filters.push(filter);
+          }
+        }
+        //
+        if (core.log) console.error(" &gt;&gt; Equalizer is loaded!");
+        core.equalizer.attach(2);
+      },
+      "attach": function (w) {
+        if (!core.equalizer.context) core.equalizer.load();
+        else {
+          core.equalizer.targets.forEach(function (t, k) {
+            if (t.getAttribute("equalizer-state") !== "attached") {
+              var src = t.src ? t.src : t.currentSrc;
+              if (src) {
+                t.setAttribute("equalizer-state", "attached");
+                if (core.log) console.error(" &gt;&gt; Equalizer is attached, loc", w, t.className);
+                if (document.location.hostname !== core.hostname(src)) {
+                  var crossorigin = t.getAttribute("crossorigin");
+                  if (!crossorigin) {
+                    if (src.substring(0, 5) !== "blob:") {
+                      t.setAttribute("crossorigin", (crossorigin ? crossorigin : "anonymous"));
+                      if (t.src) t.src = t.src + '';
+                      else if (t.currentSrc) t.load();
+                    }
+                  }
+                }
+                //
+                try {
+                  core.equalizer.source = core.equalizer.context.createMediaElementSource(t);
+                  core.equalizer.filters[0]._defaultChannelCount = core.equalizer.source.channelCount ? core.equalizer.source.channelCount : 2;
+                  var target = core.equalizer.storage.state === "OFF" ? core.equalizer.context.destination : core.equalizer.filters[0];
+                  core.equalizer.source.connect(target);
+                  //
+                  for (var i = 0; i &lt; core.equalizer.filters.length; i++) {
+                    var current = core.equalizer.filters[i];
+                    var next = core.equalizer.filters[i + 1];
+                    //
+                    current.gain.value = core.equalizer.storage.eq[i].gain;
+                    if (next) current.connect(next);
+                  }
+                  //
+                  var last = core.equalizer.filters[core.equalizer.filters.length - 1];
+                  last.connect(core.equalizer.context.destination);
+                  window.top.postMessage({"app": "audio-equalizer", "action": "app-icon-normal"}, '*');
+                } catch (e) {
+                  window.top.postMessage({"app": "audio-equalizer", "action": "app-icon-error"}, '*');
+                }
+              }
+            }
+          });
+        }
+      }
+    }
+  };
+  //
+  core.equalizer.storage = data;
+  //
+  window.addEventListener("play", function (e) {
+    core.equalizer.targets.push(e.target);
+    core.equalizer.attach(0);
+  }, true);
+  //
+  window.addEventListener("message", function (e) {
+    if (e.data.app === "audio-equalizer") {
+      if (e.data.action === "app-set") core.equalizer.set(e.data.value);
+      if (e.data.action === "app-toggle") core.equalizer.toggle(e.data.state);
+    }
+  }, false);
+  //
+  if (Audio) {
+    if (Audio.prototype) {
+      if (Audio.prototype.play) {
+        const play = Audio.prototype.play;
+        Audio.prototype.play = function () {
+          core.equalizer.targets.push(this);
+          core.equalizer.attach(1);
+          //
+          return play.apply(this, arguments);
+        };
+      }
+    }
+  }
+})({"ch":{"snap":false,"mono":false},"eq":[{"label":"master","gain":1},{"label":"64","f":64,"gain":0,"type":"peaking"},{"label":"32","f":32,"gain":0,"type":"lowshelf"},{"label":"125","f":125,"gain":0,"type":"peaking"},{"label":"250","f":250,"gain":0,"type":"peaking"},{"label":"500","f":500,"gain":0,"type":"peaking"},{"label":"1k","f":1000,"gain":0,"type":"peaking"},{"label":"2k","f":2000,"gain":0,"type":"peaking"},{"label":"4k","f":4000,"gain":0,"type":"peaking"},{"label":"8k","f":8000,"gain":0,"type":"peaking"},{"label":"16k","f":16000,"gain":0,"type":"highshelf"}],"lastupdate":1612890230454,"presets":[{"name":"Club","default":true,"gains":[0,0,4.8,3.36,3.36,3.36,1.92,0,0,0]},{"name":"Live","default":true,"gains":[-2.88,0,2.4,3.36,3.36,3.36,2.4,1.44,1.44,1.44]},{"name":"Party","default":true,"gains":[4.32,4.32,0,0,0,0,0,0,4.32,4.32]},{"name":"Pop","default":true,"gains":[0.96,2.88,4.32,4.8,3.36,0,-1.44,-1.44,0.96,0.96]},{"name":"Soft","default":true,"gains":[2.88,0.96,0,-1.44,0,2.4,4.8,5.76,6.72,7.2]},{"name":"Ska","default":true,"gains":[-1.44,-2.88,-2.4,0,2.4,3.36,5.28,5.76,6.72,5.76]},{"name":"Reggae","default":true,"gains":[0,0,0,-3.36,0,3.84,3.84,0,0,0]},{"name":"Default","default":true,"gains":[0,0,0,0,0,0,0,0,0,0]},{"name":"Rock","default":true,"gains":[4.8,2.88,-3.36,-4.8,-1.92,2.4,5.28,6.72,6.72,6.72]},{"name":"Dance","default":true,"gains":[5.76,4.32,1.44,0,0,-3.36,-4.32,-4.32,0,0]},{"name":"Techno","default":true,"gains":[4.8,3.36,0,-3.36,-2.88,0,4.8,5.76,5.76,5.28]},{"name":"Headphones","default":true,"gains":[2.88,6.72,3.36,-1.92,-1.44,0.96,2.88,5.76,7.68,8.64]},{"name":"Soft rock","default":true,"gains":[2.4,2.4,1.44,0,-2.4,-3.36,-1.92,0,1.44,5.28]},{"name":"Classical","default":true,"gains":[0,0,0,0,0,0,-4.32,-4.32,-4.32,-5.76]},{"name":"Large Hall","default":true,"gains":[6.24,6.24,3.36,3.36,0,-2.88,-2.88,-2.88,0,0]},{"name":"Full Bass","default":true,"gains":[4.8,5.76,5.76,3.36,0.96,-2.4,-4.8,-6.24,-6.72,-6.72]},{"name":"Full Treble","default":true,"gains":[-5.76,-5.76,-5.76,-2.4,1.44,6.72,9.6,9.6,9.6,10.08]},{"name":"Laptop Speakers","default":true,"gains":[2.88,6.72,3.36,-1.92,-1.44,0.96,2.88,5.76,7.68,8.64]},{"name":"Full Bass &amp; Treble","default":true,"gains":[4.32,3.36,0,-4.32,-2.88,0.96,4.8,6.72,7.2,7.2]}],"whitelist":[]})</script></svg>
