@@ -73,7 +73,7 @@
 
     /* SHINE on course cards */
     .ccard{position:relative;overflow:hidden}
-    .ccard::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);transform:skewX(-15deg);transition:left .55s ease;pointer-events:none}
+    .ccard::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transform:skewX(-15deg);transition:left .55s ease;pointer-events:none}
     .ccard:hover::after{left:125%}
 
     /* PULSE on CTA button */
@@ -172,10 +172,10 @@
     ══════════════════════════════════ */
     #partners{background:var(--grey);padding:56px 0}
     .pt-lbl{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
-    .pt-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px}
-    .pt-badge{display:flex;align-items:center;justify-content:center;padding:14px 24px;background:var(--white);border-radius:12px;border:1.5px solid var(--border);transition:all .2s;cursor:default}
-    .pt-badge:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 4px 16px rgba(14,122,154,.12)}
-    .pt-badge img{max-height:44px;max-width:200px;height:auto;width:auto;display:block;object-fit:contain}
+    .pt-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px 56px}
+    .pt-badge{display:flex;align-items:center;justify-content:center;opacity:.75;transition:opacity .25s,transform .25s;cursor:default}
+    .pt-badge:hover{opacity:1;transform:translateY(-2px)}
+    .pt-badge img{max-height:48px;max-width:180px;height:auto;width:auto;display:block}
 
     /* ══════════════════════════════════
        CATEGORIES
@@ -197,10 +197,10 @@
     /* ══════════════════════════════════
        WHY STATUS (dark band)
     ══════════════════════════════════ */
-    #why{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
-    #why::before{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(184,228,240,.04);right:-80px;top:-100px;pointer-events:none}
-    .why-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
-    .why-photo{height:440px;border-radius:var(--r);overflow:hidden;position:relative}
+    #why{background:var(--white);padding:80px 0;position:relative}
+    .why-card{max-width:880px;margin:0 auto;background:var(--navy);background-image:radial-gradient(ellipse 75% 80% at 92% 8%,rgba(14,122,154,.6) 0%,transparent 60%),radial-gradient(ellipse 55% 65% at 8% 92%,rgba(184,228,240,.13) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 50% 50%,rgba(22,47,90,.4) 0%,transparent 70%);border-radius:28px;padding:64px 56px;overflow:hidden;position:relative}
+    .why-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+    .why-photo{height:400px;border-radius:14px;overflow:hidden;position:relative}
     .why-photo img{width:100%;height:100%;object-fit:cover;display:block}
     .why-photo-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,37,69,.3),rgba(14,122,154,.2))}
     .why-txt h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);margin-bottom:14px}
@@ -214,35 +214,36 @@
     /* ══════════════════════════════════
        COURSES
     ══════════════════════════════════ */
-    #cursos{background:var(--white)}
+    #cursos{background:var(--grey)}
     .cursos-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:24px}
     .cursos-hdr-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);max-width:300px;line-height:1.05}
     .cursos-hdr-r p{color:var(--muted);font-size:.88rem;max-width:280px;margin-bottom:16px;text-align:right}
     .cursos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-    .ccard{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .25s}
-    .ccard:hover{box-shadow:0 12px 40px rgba(11,37,69,.1);transform:translateY(-4px);border-color:var(--teal)}
-    .cthumb{height:220px;position:relative;overflow:hidden}
+    .ccard{background:var(--navy);border-radius:var(--r);overflow:hidden;transition:all .25s;border:none}
+    .ccard:hover{box-shadow:0 16px 48px rgba(11,37,69,.35);transform:translateY(-4px)}
+    .cthumb{height:210px;position:relative;overflow:hidden;margin:10px 10px 0;border-radius:10px}
     .cthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
     .ccard:hover .cthumb img{transform:scale(1.05)}
-    .cthumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,37,69,.45) 0%,transparent 60%);pointer-events:none}
-    .cbody{padding:24px}
-    .cbody h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--text);margin-bottom:8px}
-    .cbody p{font-size:.86rem;color:var(--muted);margin-bottom:16px;line-height:1.55}
-    .cmeta{display:flex;gap:20px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:16px}
-    .cmi{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--muted)}
-    .cmi svg{width:13px;height:13px;color:var(--teal);flex-shrink:0}
+    .cthumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,37,69,.6) 0%,transparent 55%);pointer-events:none}
+    .cbody{padding:18px 20px 24px}
+    .cbody h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--white);margin-bottom:8px}
+    .cbody p{font-size:.86rem;color:rgba(255,255,255,.58);margin-bottom:16px;line-height:1.55}
+    .cmeta{display:flex;gap:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:16px}
+    .cmi{display:flex;align-items:center;gap:6px;font-size:.78rem;color:rgba(255,255,255,.5)}
+    .cmi svg{width:13px;height:13px;color:var(--blue);flex-shrink:0}
     .cfoot{display:flex;justify-content:space-between;align-items:center}
-    .cbadge{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);background:rgba(14,122,154,.1);padding:5px 11px;border-radius:6px}
+    .cbadge{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);background:rgba(184,228,240,.12);padding:5px 11px;border-radius:6px}
     .ccta{background:var(--blue);color:var(--navy);font-weight:700;font-size:.84rem;padding:10px 20px;border-radius:50px;transition:all .2s;cursor:pointer;font-family:'Inter',sans-serif;border:none}
     .ccta:hover{background:#9ed8ed;transform:translateY(-1px)}
 
     /* ══════════════════════════════════
        HOW IT WORKS
     ══════════════════════════════════ */
-    #howto{background:var(--grey)}
-    .howto-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    #howto{background:var(--white)}
+    .howto-in{max-width:680px;margin:0 auto}
+    .howto-l{text-align:center;margin-bottom:36px}
     .howto-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);margin-bottom:14px}
-    .howto-l p{color:var(--muted);font-size:.95rem}
+    .howto-l p{color:var(--muted);font-size:.95rem;max-width:480px;margin:0 auto}
     .steps-box{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 12px rgba(11,37,69,.06)}
     .step{display:grid;grid-template-columns:80px 1fr 28px;gap:16px;align-items:center;padding:22px 24px;cursor:pointer;transition:all .22s;border-bottom:1px solid var(--border)}
     .step:last-child{border-bottom:none}
@@ -407,7 +408,8 @@
       .testi-grid{grid-template-columns:repeat(2,1fr)}
       .news-grid{grid-template-columns:repeat(2,1fr)}
       .foot-grid{grid-template-columns:repeat(2,1fr);gap:32px}
-      .about-in,.why-in,.howto-in,.faq-in{gap:48px}
+      .about-in,.why-in,.faq-in{gap:48px}
+      .why-card{padding:52px 40px}
       .form-layout{gap:48px}
     }
 
@@ -440,8 +442,8 @@
 
       /* Partners */
       #partners{padding:40px 0}
-      .pt-badge{padding:10px 16px}
-      .pt-badge img{max-height:36px;max-width:160px}
+      .pt-grid{gap:24px 36px}
+      .pt-badge img{max-height:36px;max-width:140px}
 
       /* Categories */
       .cats-grid{grid-template-columns:repeat(2,1fr);gap:14px}
@@ -450,21 +452,23 @@
       .sh{margin-bottom:36px}
 
       /* Why STATUS */
+      .why-card{border-radius:20px;padding:40px 28px}
       .why-in{grid-template-columns:1fr}
       .why-photo{display:none}
-      #why{padding:64px 0}
+      #why{padding:40px 0}
 
       /* Courses */
       .cursos-hdr{flex-direction:column;align-items:flex-start;margin-bottom:32px;gap:12px}
       .cursos-hdr-r p{text-align:left}
       .cursos-hdr-l h2{max-width:100%}
       .cursos-grid{grid-template-columns:1fr}
-      .cthumb{height:180px}
-      .cbody{padding:18px}
+      .cthumb{height:170px}
+      .cbody{padding:16px 18px 20px}
       .cmeta{flex-wrap:wrap;gap:10px}
 
       /* How It Works */
-      .howto-in{grid-template-columns:1fr;gap:28px}
+      .howto-in{max-width:100%}
+      .howto-l{margin-bottom:28px}
       .step{grid-template-columns:60px 1fr 24px;padding:16px}
       .step-num{font-size:1.8rem}
 
@@ -718,8 +722,9 @@
 <!-- ═══ WHY STATUS ════════════════════════════════════ -->
 <section id="why">
   <div class="container">
+    <div class="why-card rv">
     <div class="why-in">
-      <div class="why-photo rv-left">
+      <div class="why-photo">
         <img src="https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?w=600&q=80&fit=crop&auto=format" alt="Jovens estudantes da STATUS" loading="lazy" />
         <div class="why-photo-overlay"></div>
       </div>
@@ -743,6 +748,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
