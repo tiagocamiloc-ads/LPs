@@ -326,8 +326,8 @@
     .faq-in{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
     .faq-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);margin-bottom:14px}
     .faq-l p{color:var(--muted);font-size:.93rem;margin-bottom:28px}
-    .faq-l-img{height:200px;border-radius:var(--r);background:linear-gradient(145deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;margin-top:32px}
-    .faq-l-img svg{width:48px;height:48px;color:rgba(255,255,255,.5)}
+    .faq-l-img{height:260px;border-radius:var(--r);overflow:hidden;margin-top:32px;position:relative}
+    .faq-l-img img{width:100%;height:100%;object-fit:cover;display:block}
     .faq-list{}
     .fq{border-bottom:1px solid var(--border)}
     .fq:first-child{border-top:1px solid var(--border)}
@@ -1058,7 +1058,7 @@
         <p>As respostas às dúvidas mais comuns sobre candidatura, cursos e vida na STATUS.</p>
         <a href="#formulario" class="btn-teal-outline">Falar connosco</a>
         <div class="faq-l-img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80&fit=crop&auto=format" alt="Estudante STATUS" loading="lazy" />
         </div>
       </div>
       <div class="faq-list rv d2">
