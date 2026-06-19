@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STATUS — Escola Profissional Lousã | Candidaturas 2025/2026</title>
+  <meta name="description" content="Inscreve-te nos cursos profissionais da STATUS. Candidaturas abertas para 2025/2026. #QueroSerPro" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0B2545;
+      --navy2:  #162f5a;
+      --teal:   #0E7A9A;
+      --blue:   #B8E4F0;
+      --white:  #FFFFFF;
+      --grey:   #F5F6F8;
+      --border: #E8ECF0;
+      --text:   #1A1A2E;
+      --muted:  #637381;
+      --r:      16px;
+      --r-sm:   10px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    p{line-height:1.7}
+
+    /* TYPOGRAPHY */
+    h1,h2{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:1}
+
+    /* LAYOUT */
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    section{padding:96px 0}
+
+    /* BUTTONS — pill shape like Coursiva */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:'Inter',sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .2s;border:none;white-space:nowrap}
+    .btn-blue{background:var(--blue);color:var(--navy)}
+    .btn-blue:hover{background:#9ed8ed;transform:translateY(-2px)}
+    .btn-teal{background:var(--teal);color:var(--white)}
+    .btn-teal:hover{background:#0c6a87;transform:translateY(-2px)}
+    .btn-white-outline{background:transparent;color:var(--white);border:2px solid var(--white)}
+    .btn-white-outline:hover{background:var(--white);color:var(--navy)}
+    .btn-teal-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-family:'Inter',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .2s;background:transparent;color:var(--teal);border:2px solid var(--teal)}
+    .btn-teal-outline:hover{background:var(--teal);color:var(--white)}
+
+    /* SECTION LABEL */
+    .lbl{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+    .lbl::before{content:'';display:block;width:20px;height:3px;background:var(--teal);border-radius:2px}
+    .lbl.inv{color:var(--blue)}.lbl.inv::before{background:var(--blue)}
+
+    /* SCROLL REVEAL */
+    .rv{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+    .rv.on{opacity:1;transform:none}
+    .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+    .rv-left{opacity:0;transform:translateX(-32px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+    .rv-left.on{opacity:1;transform:none}
+    .rv-right{opacity:0;transform:translateX(32px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1)}
+    .rv-right.on{opacity:1;transform:none}
+    .rv-scale{opacity:0;transform:scale(.94);transition:opacity .55s cubic-bezier(.22,.61,.36,1),transform .55s cubic-bezier(.22,.61,.36,1)}
+    .rv-scale.on{opacity:1;transform:none}
+
+    /* HERO STAGGER — children animate in sequence */
+    .hero-txt .hero-tag-pill{opacity:0;transform:translateY(16px);animation:heroIn .6s cubic-bezier(.22,.61,.36,1) .2s forwards}
+    .hero-txt .hero-h1{opacity:0;transform:translateY(20px);animation:heroIn .7s cubic-bezier(.22,.61,.36,1) .35s forwards}
+    .hero-txt .hero-sub{opacity:0;transform:translateY(16px);animation:heroIn .6s cubic-bezier(.22,.61,.36,1) .5s forwards}
+    .hero-txt .hero-btns{opacity:0;transform:translateY(14px);animation:heroIn .6s cubic-bezier(.22,.61,.36,1) .65s forwards}
+    @keyframes heroIn{to{opacity:1;transform:none}}
+
+    /* SHINE on course cards */
+    .ccard{position:relative;overflow:hidden}
+    .ccard::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);transform:skewX(-15deg);transition:left .55s ease;pointer-events:none}
+    .ccard:hover::after{left:125%}
+
+    /* PULSE on CTA button */
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(184,228,240,.4)}70%{box-shadow:0 0 0 10px rgba(184,228,240,0)}}
+    .btn-blue{animation:pulse 2.5s ease-in-out infinite}
+
+    /* UNDERLINE SLIDE on nav links */
+    .nav-lnks a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--teal);border-radius:2px;transition:width .25s ease}
+    .nav-lnks a:hover::after,.nav-lnks a.act::after{width:100%}
+
+    /* PARTNER BADGE stagger */
+    .pt-badge:nth-child(1){transition-delay:.05s}
+    .pt-badge:nth-child(2){transition-delay:.1s}
+    .pt-badge:nth-child(3){transition-delay:.15s}
+    .pt-badge:nth-child(4){transition-delay:.2s}
+    .pt-badge:nth-child(5){transition-delay:.25s}
+    .pt-badge:nth-child(6){transition-delay:.3s}
+
+    /* ══════════════════════════════════
+       HEADER
+    ══════════════════════════════════ */
+    #hdr{position:sticky;top:0;z-index:100;background:var(--white);box-shadow:0 1px 0 var(--border);transition:box-shadow .2s}
+    .hdr-in{display:flex;align-items:center;justify-content:space-between;height:80px}
+    .hdr-logo img{height:44px;width:auto}
+    .hdr-nav{display:flex;align-items:center;gap:40px}
+    .nav-lnks{display:flex;gap:32px}
+    .nav-lnks a{font-size:.9rem;font-weight:600;color:var(--text);transition:color .15s;position:relative;padding-bottom:4px}
+    .nav-lnks a.act,.nav-lnks a:hover{color:var(--teal)}
+    .nav-lnks a.act::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);border-radius:2px}
+    .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+    .burger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .25s}
+    .mob-nav{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--border);padding:8px 0 16px}
+    .mob-nav.open{display:flex}
+    .mob-nav a{padding:14px 24px;font-weight:600;font-size:.95rem;color:var(--text);border-bottom:1px solid var(--border)}
+    .mob-nav a:hover{color:var(--teal)}
+    .mob-nav .btn{margin:12px 24px 0;justify-content:center}
+
+    /* ══════════════════════════════════
+       HERO
+    ══════════════════════════════════ */
+    #hero{background:var(--navy);position:relative;overflow:hidden;padding:80px 0}
+    #hero::before{content:'';position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(255,255,255,.04);top:-180px;right:-80px;pointer-events:none}
+    #hero::after{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(184,228,240,.04);bottom:80px;left:-120px;pointer-events:none}
+    .hero-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2}
+    .hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,7.5rem);line-height:.92;color:var(--white);margin-bottom:20px}
+    .hero-h1 em{color:var(--blue);font-style:normal;display:inline}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,.62);margin-bottom:36px;max-width:420px}
+    .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+
+    /* Hero visual */
+    .hero-vis{position:relative;display:flex;justify-content:flex-end;align-items:flex-end}
+    .hero-photo{
+      width:100%;max-width:440px;aspect-ratio:.75;border-radius:24px 24px 0 0;overflow:hidden;
+      position:relative;
+    }
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+    .hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,37,69,.6) 0%,rgba(11,37,69,.1) 50%,transparent 100%)}
+    .hero-photo-label{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--blue);position:absolute;bottom:20px;left:50%;transform:translateX(-50%);white-space:nowrap;letter-spacing:.05em;z-index:2}
+
+    /* Floating cards */
+    .fc{position:absolute;background:var(--white);border-radius:14px;padding:14px 18px;box-shadow:0 8px 32px rgba(0,0,0,.22);z-index:10;min-width:176px}
+    .fc1{top:28px;left:-44px;animation:fl 4s ease-in-out infinite}
+    .fc2{bottom:56px;right:-36px;animation:fl 4s ease-in-out 2s infinite}
+    @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    .fc-stars{color:var(--teal);font-size:.72rem;letter-spacing:2px;margin-bottom:4px}
+    .fc-avs{display:flex;margin-bottom:6px}
+    .fc-avs span{width:26px;height:26px;border-radius:50%;border:2px solid var(--white);display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:700;color:var(--white);margin-left:-7px}
+    .fc-avs span:first-child{margin-left:0}
+    .fc-avs span:nth-child(1){background:var(--teal)}
+    .fc-avs span:nth-child(2){background:var(--navy)}
+    .fc-avs span:nth-child(3){background:#1A3A6B}
+    .fc-title{font-weight:700;font-size:.78rem;color:var(--text)}
+    .fc-sub{font-size:.68rem;color:var(--muted)}
+    .fc-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--navy);line-height:1;margin-bottom:2px}
+    .fc-lbl{font-size:.72rem;font-weight:700;color:var(--teal)}
+    .fc-desc{font-size:.68rem;color:var(--muted);margin-top:2px}
+
+    /* ══════════════════════════════════
+       ABOUT
+    ══════════════════════════════════ */
+    #about{background:var(--white)}
+    .about-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .about-photos{position:relative;height:460px}
+    .ab-main{position:absolute;left:0;top:0;width:72%;height:84%;border-radius:var(--r);overflow:hidden}
+    .ab-main img{width:100%;height:100%;object-fit:cover;display:block}
+    .ab-sec{position:absolute;right:0;bottom:0;width:52%;height:58%;border-radius:var(--r);overflow:hidden;border:6px solid var(--white);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    .ab-sec img{width:100%;height:100%;object-fit:cover;display:block}
+    .about-txt h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);margin-bottom:20px;line-height:1.05}
+    .about-txt p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .about-stats{display:flex;gap:32px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border);flex-wrap:wrap}
+    .as-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--navy);line-height:1;margin-bottom:4px}
+    .as-lbl{font-size:.78rem;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
+    /* ══════════════════════════════════
+       PARTNERS
+    ══════════════════════════════════ */
+    #partners{background:var(--grey);padding:56px 0}
+    .pt-lbl{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+    .pt-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px}
+    .pt-badge{display:flex;align-items:center;gap:9px;padding:12px 22px;background:var(--white);border-radius:12px;border:1.5px solid var(--border);font-weight:700;font-size:.83rem;color:var(--muted);transition:all .2s;cursor:default}
+    .pt-badge:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+    .pt-badge svg{width:18px;height:18px;flex-shrink:0}
+
+    /* ══════════════════════════════════
+       CATEGORIES
+    ══════════════════════════════════ */
+    #cats{background:var(--white)}
+    .sh{margin-bottom:52px}
+    .sh h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);margin-bottom:10px}
+    .sh p{color:var(--muted);font-size:.95rem;max-width:500px}
+    .cats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .cat-card{border:1.5px solid var(--border);border-radius:var(--r);padding:28px;transition:all .25s;cursor:default}
+    .cat-card:hover{border-color:var(--teal);box-shadow:0 8px 32px rgba(14,122,154,.1);transform:translateY(-4px)}
+    .cat-ico{width:64px;height:64px;border-radius:16px;background:var(--grey);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .2s}
+    .cat-card:hover .cat-ico{background:var(--blue)}
+    .cat-ico svg{width:30px;height:30px;color:var(--teal)}
+    .cat-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:8px}
+    .cat-card p{font-size:.84rem;color:var(--muted);line-height:1.55}
+    .cat-count{font-size:.76rem;font-weight:700;color:var(--teal);margin-top:14px}
+
+    /* ══════════════════════════════════
+       WHY STATUS (dark band)
+    ══════════════════════════════════ */
+    #why{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
+    #why::before{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(184,228,240,.04);right:-80px;top:-100px;pointer-events:none}
+    .why-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
+    .why-photo{height:440px;border-radius:var(--r);overflow:hidden;position:relative}
+    .why-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .why-photo-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,37,69,.3),rgba(14,122,154,.2))}
+    .why-txt h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);margin-bottom:14px}
+    .why-txt>p{color:rgba(255,255,255,.58);font-size:.95rem;margin-bottom:28px}
+    .why-pts{display:flex;flex-direction:column}
+    .why-pt{border-top:1px solid rgba(255,255,255,.1);padding:20px 0}
+    .why-pt h3{color:var(--white);font-size:.95rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:10px}
+    .why-pt h3::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
+    .why-pt p{color:rgba(255,255,255,.5);font-size:.87rem;padding-left:18px}
+
+    /* ══════════════════════════════════
+       COURSES
+    ══════════════════════════════════ */
+    #cursos{background:var(--white)}
+    .cursos-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:24px}
+    .cursos-hdr-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);max-width:300px;line-height:1.05}
+    .cursos-hdr-r p{color:var(--muted);font-size:.88rem;max-width:280px;margin-bottom:16px;text-align:right}
+    .cursos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+    .ccard{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all .25s}
+    .ccard:hover{box-shadow:0 12px 40px rgba(11,37,69,.1);transform:translateY(-4px);border-color:var(--teal)}
+    .cthumb{height:220px;position:relative;overflow:hidden}
+    .cthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .ccard:hover .cthumb img{transform:scale(1.05)}
+    .cthumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,37,69,.45) 0%,transparent 60%);pointer-events:none}
+    .cbody{padding:24px}
+    .cbody h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--text);margin-bottom:8px}
+    .cbody p{font-size:.86rem;color:var(--muted);margin-bottom:16px;line-height:1.55}
+    .cmeta{display:flex;gap:20px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:16px}
+    .cmi{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--muted)}
+    .cmi svg{width:13px;height:13px;color:var(--teal);flex-shrink:0}
+    .cfoot{display:flex;justify-content:space-between;align-items:center}
+    .cbadge{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);background:rgba(14,122,154,.1);padding:5px 11px;border-radius:6px}
+    .ccta{background:var(--blue);color:var(--navy);font-weight:700;font-size:.84rem;padding:10px 20px;border-radius:50px;transition:all .2s;cursor:pointer;font-family:'Inter',sans-serif;border:none}
+    .ccta:hover{background:#9ed8ed;transform:translateY(-1px)}
+
+    /* ══════════════════════════════════
+       HOW IT WORKS
+    ══════════════════════════════════ */
+    #howto{background:var(--grey)}
+    .howto-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .howto-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);margin-bottom:14px}
+    .howto-l p{color:var(--muted);font-size:.95rem}
+    .steps-box{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 12px rgba(11,37,69,.06)}
+    .step{display:grid;grid-template-columns:80px 1fr 28px;gap:16px;align-items:center;padding:22px 24px;cursor:pointer;transition:all .22s;border-bottom:1px solid var(--border)}
+    .step:last-child{border-bottom:none}
+    .step:hover{background:rgba(14,122,154,.04)}
+    .step.act{background:var(--navy)}
+    .step-tag{text-align:left}
+    .step-word{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block}
+    .step-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--muted);line-height:1;display:block}
+    .step.act .step-word{color:rgba(255,255,255,.45)}
+    .step.act .step-num{color:var(--white)}
+    .step-info h3{font-size:.93rem;font-weight:700;color:var(--text);margin-bottom:3px}
+    .step-info p{font-size:.82rem;color:var(--muted)}
+    .step.act .step-info h3{color:var(--white)}
+    .step.act .step-info p{color:rgba(255,255,255,.55)}
+    .step-arr{color:var(--muted);font-size:1rem;transition:color .2s}
+    .step.act .step-arr{color:var(--blue)}
+
+    /* ══════════════════════════════════
+       APOIOS (adapts Pricing layout)
+    ══════════════════════════════════ */
+    #apoios{background:var(--white)}
+    .apoios-hdr{text-align:center;margin-bottom:56px}
+    .apoios-hdr h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text)}
+    .apoios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .apcard{border:1.5px solid var(--border);border-radius:var(--r);padding:36px 30px;transition:all .25s}
+    .apcard:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(14,122,154,.1)}
+    .apcard.hl{background:var(--navy);border-color:var(--navy)}
+    .ap-badge{display:inline-block;background:var(--blue);color:var(--navy);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:20px}
+    .ap-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--text);margin-bottom:4px;letter-spacing:.02em}
+    .apcard.hl .ap-title{color:var(--white)}
+    .ap-value{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--navy);line-height:1;margin-bottom:2px}
+    .apcard.hl .ap-value{color:var(--blue)}
+    .ap-period{font-size:.8rem;color:var(--muted);margin-bottom:20px}
+    .apcard.hl .ap-period{color:rgba(255,255,255,.45)}
+    .ap-desc{font-size:.87rem;color:var(--muted);line-height:1.65;margin-bottom:24px}
+    .apcard.hl .ap-desc{color:rgba(255,255,255,.58)}
+    .ap-btn{width:100%;padding:14px;background:var(--grey);color:var(--text);font-weight:700;font-size:.9rem;border-radius:50px;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+    .ap-btn:hover{background:var(--navy);color:var(--white)}
+    .apcard.hl .ap-btn{background:var(--blue);color:var(--navy)}
+    .apcard.hl .ap-btn:hover{background:#9ed8ed}
+    .ap-feats{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+    .ap-feat{display:flex;align-items:center;gap:10px;font-size:.86rem;color:var(--muted)}
+    .apcard.hl .ap-feat{color:rgba(255,255,255,.65)}
+    .ap-feat-dot{width:18px;height:18px;border-radius:50%;background:var(--blue);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .ap-feat-dot svg{width:10px;height:10px;color:var(--navy)}
+
+    /* ══════════════════════════════════
+       CTA BANNER
+    ══════════════════════════════════ */
+    #ctabanner{position:relative;overflow:hidden;background:var(--navy);padding:88px 0}
+    .cta-ilu{position:absolute;right:0;top:0;height:100%;width:48%;background:linear-gradient(135deg,#0E7A9A,#1A3A6B 50%,#0B2545);clip-path:polygon(14% 0%,100% 0%,100% 100%,0% 100%);display:flex;align-items:center;justify-content:center}
+    .cta-ilu svg{width:80px;height:80px;color:rgba(184,228,240,.2)}
+    .ctabanner-txt{position:relative;z-index:2;max-width:560px}
+    .ctabanner-txt h2{font-size:clamp(2.5rem,6vw,5rem);color:var(--white);margin-bottom:14px}
+    .ctabanner-txt p{color:rgba(255,255,255,.6);font-size:1rem;margin-bottom:32px;max-width:440px}
+    .cta-btns{display:flex;gap:16px;flex-wrap:wrap}
+
+    /* ══════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════ */
+    #testi{background:var(--white)}
+    .testi-hdr{text-align:center;margin-bottom:52px}
+    .testi-hdr h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text)}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .tcard{border:1.5px solid var(--border);border-radius:var(--r);padding:28px;transition:all .25s}
+    .tcard:hover{box-shadow:0 8px 32px rgba(14,122,154,.1);transform:translateY(-3px);border-color:var(--teal)}
+    .tcard-q{color:var(--teal);font-size:2.4rem;line-height:1;font-family:serif;font-weight:900;margin-bottom:12px;opacity:.8}
+    .tcard-txt{font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:22px;font-style:italic}
+    .tcard-bot{display:flex;align-items:center;justify-content:space-between}
+    .tcard-name{font-weight:700;color:var(--teal);font-size:.88rem}
+    .tcard-role{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
+    .tcard-av{width:50px;height:50px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--white);flex-shrink:0}
+
+    /* ══════════════════════════════════
+       FAQ (split layout like Coursiva)
+    ══════════════════════════════════ */
+    #faq{background:var(--white);padding-top:0}
+    .faq-in{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
+    .faq-l h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);margin-bottom:14px}
+    .faq-l p{color:var(--muted);font-size:.93rem;margin-bottom:28px}
+    .faq-l-img{height:200px;border-radius:var(--r);background:linear-gradient(145deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;margin-top:32px}
+    .faq-l-img svg{width:48px;height:48px;color:rgba(255,255,255,.5)}
+    .faq-list{}
+    .fq{border-bottom:1px solid var(--border)}
+    .fq:first-child{border-top:1px solid var(--border)}
+    .fq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--text);gap:16px;user-select:none;transition:color .2s}
+    .fq-q:hover{color:var(--teal)}
+    .fq-ico{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .25s}
+    .fq-ico svg{width:12px;height:12px;color:var(--muted)}
+    .fq.open .fq-q{color:var(--teal)}
+    .fq.open .fq-ico{background:var(--navy);border-color:var(--navy);transform:rotate(45deg)}
+    .fq.open .fq-ico svg{color:var(--white)}
+    .fq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;font-size:.89rem;color:var(--muted);line-height:1.7}
+    .fq.open .fq-a{max-height:200px;padding-bottom:18px}
+
+    /* ══════════════════════════════════
+       BLOG / NEWS
+    ══════════════════════════════════ */
+    #news{background:var(--grey)}
+    .news-hdr{text-align:center;margin-bottom:48px}
+    .news-hdr h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text)}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .ncard{background:var(--white);border-radius:var(--r);overflow:hidden;transition:all .25s;border:1px solid var(--border)}
+    .ncard:hover{box-shadow:0 12px 32px rgba(11,37,69,.1);transform:translateY(-4px)}
+    .nthumb{height:210px;position:relative;overflow:hidden}
+    .nthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .ncard:hover .nthumb img{transform:scale(1.05)}
+    .ntag-wrap{position:absolute;top:14px;left:14px}
+    .ntag{background:var(--blue);color:var(--navy);font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.05em}
+    .nbody{padding:24px}
+    .ndate{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
+    .ndate::before{content:'';width:14px;height:2px;background:var(--teal);border-radius:2px}
+    .nbody h3{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--text);margin-bottom:8px;letter-spacing:.02em;line-height:1.1}
+    .nbody p{font-size:.84rem;color:var(--muted);line-height:1.6}
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    #foot{background:#0A1E3C}
+    .foot-nl{background:var(--navy);padding:56px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .foot-nl-in{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .nl-txt h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white);margin-bottom:6px}
+    .nl-txt p{color:rgba(255,255,255,.5);font-size:.87rem}
+    .nl-form{display:flex;gap:12px}
+    .nl-input{flex:1;padding:14px 18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:50px;color:var(--white);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+    .nl-input::placeholder{color:rgba(255,255,255,.38)}
+    .nl-input:focus{border-color:var(--blue)}
+    .nl-btn{padding:14px 28px;background:var(--blue);color:var(--navy);font-weight:700;font-size:.87rem;border-radius:50px;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;white-space:nowrap}
+    .nl-btn:hover{background:#9ed8ed}
+    .foot-main{padding:64px 0 40px}
+    .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:48px}
+    .foot-brand img{height:40px;filter:brightness(0) invert(1);margin-bottom:14px}
+    .foot-brand p{color:rgba(255,255,255,.4);font-size:.84rem;line-height:1.65;max-width:240px}
+    .foot-soc{display:flex;gap:10px;margin-top:18px}
+    .fs{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s}
+    .fs:hover{background:var(--teal)}
+    .fs svg{width:16px;height:16px;color:rgba(255,255,255,.65)}
+    .foot-col h4{color:var(--white);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+    .foot-col ul{display:flex;flex-direction:column;gap:10px}
+    .foot-col ul li a{color:rgba(255,255,255,.42);font-size:.84rem;display:flex;align-items:center;gap:6px;transition:color .15s}
+    .foot-col ul li a:hover{color:var(--blue)}
+    .foot-col ul li a::before{content:'›';color:var(--teal);font-size:.8rem}
+    .fci{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px}
+    .fci svg{width:15px;height:15px;color:var(--teal);flex-shrink:0;margin-top:2px}
+    .fci a,.fci span{color:rgba(255,255,255,.45);font-size:.84rem;line-height:1.5}
+    .fci a:hover{color:var(--blue)}
+    .foot-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .foot-bot p{color:rgba(255,255,255,.28);font-size:.78rem}
+    .foot-hash{color:var(--blue);font-weight:700;font-size:.84rem}
+
+    /* ══════════════════════════════════
+       FORM LAYOUT (factored from inline)
+    ══════════════════════════════════ */
+    .form-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .form-name-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+
+    /* ══════════════════════════════════
+       RESPONSIVE — Tablet 1024px
+    ══════════════════════════════════ */
+    @media(max-width:1024px){
+      .cats-grid{grid-template-columns:repeat(2,1fr)}
+      .testi-grid{grid-template-columns:repeat(2,1fr)}
+      .news-grid{grid-template-columns:repeat(2,1fr)}
+      .foot-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+      .about-in,.why-in,.howto-in,.faq-in{gap:48px}
+      .form-layout{gap:48px}
+    }
+
+    /* ══════════════════════════════════
+       RESPONSIVE — Mobile 768px
+    ══════════════════════════════════ */
+    @media(max-width:768px){
+      section{padding:64px 0}
+
+      /* Header */
+      .nav-lnks,.hdr-nav>.btn{display:none}
+      .burger{display:flex}
+
+      /* Hero */
+      #hero{padding:52px 0}
+      .hero-in{grid-template-columns:1fr;gap:0}
+      .hero-h1{font-size:clamp(2.8rem,12vw,4.8rem);margin-bottom:16px}
+      .hero-sub{font-size:.9rem;max-width:100%;margin-bottom:28px}
+      .hero-btns{flex-direction:column;gap:12px}
+      .hero-btns .btn{justify-content:center;width:100%}
+      .hero-vis{display:none}
+
+      /* About */
+      .about-in{grid-template-columns:1fr;gap:0}
+      .about-photos{height:220px;margin-bottom:40px}
+      .ab-main{position:relative;width:100%;height:100%}
+      .ab-sec{display:none}
+      .about-stats{gap:16px}
+      .as-num{font-size:2rem}
+
+      /* Partners */
+      #partners{padding:40px 0}
+      .pt-badge{padding:10px 14px;font-size:.77rem;gap:7px}
+
+      /* Categories */
+      .cats-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+      .cat-card{padding:20px}
+      .cat-ico{width:52px;height:52px;margin-bottom:14px}
+      .sh{margin-bottom:36px}
+
+      /* Why STATUS */
+      .why-in{grid-template-columns:1fr}
+      .why-photo{display:none}
+      #why{padding:64px 0}
+
+      /* Courses */
+      .cursos-hdr{flex-direction:column;align-items:flex-start;margin-bottom:32px;gap:12px}
+      .cursos-hdr-r p{text-align:left}
+      .cursos-hdr-l h2{max-width:100%}
+      .cursos-grid{grid-template-columns:1fr}
+      .cthumb{height:180px}
+      .cbody{padding:18px}
+      .cmeta{flex-wrap:wrap;gap:10px}
+
+      /* How It Works */
+      .howto-in{grid-template-columns:1fr;gap:28px}
+      .step{grid-template-columns:60px 1fr 24px;padding:16px}
+      .step-num{font-size:1.8rem}
+
+      /* Apoios */
+      .apoios-grid{grid-template-columns:1fr}
+      .apcard{padding:28px 22px}
+      .apoios-hdr{margin-bottom:36px}
+
+      /* CTA Banner */
+      .cta-ilu{display:none}
+      #ctabanner{padding:56px 0}
+      .ctabanner-txt h2{font-size:clamp(2rem,8vw,3.5rem)}
+      .cta-btns{flex-direction:column;gap:12px}
+      .cta-btns .btn{justify-content:center;width:100%}
+
+      /* Testimonials */
+      .testi-grid{grid-template-columns:1fr}
+      .testi-hdr{margin-bottom:32px}
+      .tcard{padding:22px}
+
+      /* FAQ */
+      .faq-in{grid-template-columns:1fr;gap:24px}
+      .faq-l-img{display:none}
+
+      /* News */
+      .news-grid{grid-template-columns:1fr}
+      .nthumb{height:180px}
+      .news-hdr{margin-bottom:32px}
+
+      /* Form section */
+      .form-layout{grid-template-columns:1fr;gap:36px}
+      .form-name-row{grid-template-columns:1fr}
+      .form-card{padding:28px 20px!important}
+
+      /* Footer */
+      .foot-nl-in{grid-template-columns:1fr;gap:20px}
+      .nl-form{flex-direction:column}
+      .nl-btn{width:100%}
+      .foot-grid{grid-template-columns:1fr;gap:28px}
+      .foot-bot{flex-direction:column;text-align:center}
+    }
+
+    /* ══════════════════════════════════
+       RESPONSIVE — Small phone 480px
+    ══════════════════════════════════ */
+    @media(max-width:480px){
+      section{padding:52px 0}
+      .container{padding:0 16px}
+
+      /* Hero */
+      .hero-h1{font-size:clamp(2.4rem,13vw,3.6rem)}
+
+      /* Categories */
+      .cats-grid{grid-template-columns:1fr}
+
+      /* Courses */
+      .cthumb{height:160px}
+      .cbody h3{font-size:1.15rem}
+
+      /* CTA Banner */
+      .ctabanner-txt h2{font-size:clamp(1.8rem,9vw,2.8rem)}
+
+      /* Apoios */
+      .ap-value{font-size:3rem}
+
+      /* Footer */
+      .nl-txt h3{font-size:1.6rem}
+      .foot-nl{padding:40px 0}
+      .foot-main{padding:48px 0 32px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ════════════════════════════════════════ -->
+<header id="hdr">
+  <div class="container">
+    <div class="hdr-in">
+      <a href="#" class="hdr-logo"><img src="assets/logo_status.png" alt="STATUS — Escola Profissional Lousã" /></a>
+      <nav class="hdr-nav">
+        <ul class="nav-lnks">
+          <li><a href="#" class="act">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#formulario">Contacto</a></li>
+        </ul>
+        <a href="#formulario" class="btn btn-teal">Candidata-te</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mob-nav" id="mobNav">
+    <a href="#" onclick="closeMob()">Início</a>
+    <a href="#about" onclick="closeMob()">Sobre</a>
+    <a href="#cursos" onclick="closeMob()">Cursos</a>
+    <a href="#faq" onclick="closeMob()">FAQ</a>
+    <a href="#formulario" onclick="closeMob()">Contacto</a>
+    <a href="#formulario" class="btn btn-teal" onclick="closeMob()">Candidata-te</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO ══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-in">
+      <div class="hero-txt">
+        <div class="hero-tag-pill" style="display:inline-flex;align-items:center;gap:8px;background:rgba(184,228,240,.15);border:1px solid rgba(184,228,240,.25);color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border-radius:50px;margin-bottom:24px"><span style="width:7px;height:7px;background:#4ECDC4;border-radius:50%"></span>Candidaturas abertas 2025/2026</div>
+        <h1 class="hero-h1">Já és <em>PRO.</em><br>Só ainda não sabes.</h1>
+        <p class="hero-sub">Ainda não sabes bem o que queres ser. Está bem. A STATUS existe precisamente para isso: 8 cursos onde aprendes fazendo, com pessoas reais, e sais com o 12.º ano no bolso.</p>
+        <div class="hero-btns">
+          <a href="#formulario" class="btn btn-blue">Candidata-te agora</a>
+          <a href="#cursos" class="btn btn-white-outline">Ver cursos</a>
+        </div>
+      </div>
+      <div class="hero-vis rv d2">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1495968283540-e1df41995ba6?w=480&q=85&fit=crop&auto=format" alt="Jovem estudante da STATUS" loading="eager" />
+          <div class="hero-photo-overlay"></div>
+          <span class="hero-photo-label">#QueroSerPro</span>
+        </div>
+        <!-- Floating card 1 -->
+        <div class="fc fc1">
+          <div class="fc-stars">★★★★★</div>
+          <div class="fc-avs">
+            <span>MA</span><span>TS</span><span>BF</span>
+          </div>
+          <div class="fc-title">35+ Anos de Experiência</div>
+          <div class="fc-sub">Escola Profissional Lousã</div>
+        </div>
+        <!-- Floating card 2 -->
+        <div class="fc fc2">
+          <div class="fc-num">100%</div>
+          <div class="fc-lbl">Integração Profissional</div>
+          <div class="fc-desc">Taxa de empregabilidade</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-in">
+      <div class="about-photos rv-left">
+        <div class="ab-main">
+          <img src="https://images.unsplash.com/photo-1776178320152-90f9bc841e7b?w=600&q=80&fit=crop&auto=format" alt="Alunos da STATUS em aula" loading="lazy" />
+        </div>
+        <div class="ab-sec">
+          <img src="https://images.unsplash.com/photo-1534644107580-3a4dbd494a95?w=400&q=80&fit=crop&auto=format" alt="Aluno STATUS a trabalhar" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-txt rv-right d2">
+        <span class="lbl">Sobre nós</span>
+        <h2>Não somos uma escola normal. Somos a STATUS.</h2>
+        <p>Estamos aqui desde 1991. Não para te dar teoria num quadro. Para te pôr a trabalhar em coisas reais, com empresas reais, antes de teres qualquer diploma nas mãos.</p>
+        <p>Os nossos professores trabalham nas suas áreas. Temos parcerias com empresas da região. E temos o Erasmus+ para quem quer ir mais longe, com financiamento incluído.</p>
+        <a href="#formulario" class="btn-teal-outline" style="margin-top:8px">Saber mais</a>
+        <div class="about-stats">
+          <div class="rv d1">
+            <div class="as-num" data-count="1991">1991</div>
+            <div class="as-lbl">Fundada em</div>
+          </div>
+          <div class="rv d2">
+            <div class="as-num" data-count="8">8</div>
+            <div class="as-lbl">Cursos profissionais</div>
+          </div>
+          <div class="rv d3">
+            <div class="as-num">Erasmus+</div>
+            <div class="as-lbl">Mobilidade internacional</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARTNERS ══════════════════════════════════════ -->
+<section id="partners">
+  <div class="container">
+    <p class="pt-lbl">Reconhecidos e certificados por</p>
+    <div class="pt-grid">
+      <div class="pt-badge rv d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+        Erasmus+
+      </div>
+      <div class="pt-badge rv d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Eco-Escolas
+      </div>
+      <div class="pt-badge rv d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        ANQEP
+      </div>
+      <div class="pt-badge rv d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Município da Lousã
+      </div>
+      <div class="pt-badge rv d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Active Citizens Fund
+      </div>
+      <div class="pt-badge rv d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Min. Educação
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CATEGORIES ════════════════════════════════════ -->
+<section id="cats">
+  <div class="container">
+    <div class="sh rv">
+      <span class="lbl">Áreas de formação</span>
+      <h2>Escolhe a tua área</h2>
+      <p>4 grandes áreas, 8 cursos profissionais. Encontra o percurso que combina com o teu futuro.</p>
+    </div>
+    <div class="cats-grid">
+      <div class="cat-card rv d1">
+        <div class="cat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Digital e Tecnologia</h3>
+        <p>Multimédia, App &amp; Mobile Developer e Informática para quem quer liderar o mundo digital.</p>
+        <div class="cat-count">3 cursos disponíveis</div>
+      </div>
+      <div class="cat-card rv d2">
+        <div class="cat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Comunicação e Eventos</h3>
+        <p>Marketing, publicidade e organização de eventos para quem quer fazer as marcas brilhar.</p>
+        <div class="cat-count">2 cursos disponíveis</div>
+      </div>
+      <div class="cat-card rv d3">
+        <div class="cat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6.5 6.5a6 6 0 1 0 11 0"/><path d="M3 14H2M22 14h-1M12 2V.5"/></svg>
+        </div>
+        <h3>Desporto e Turismo</h3>
+        <p>Treino desportivo e animação turística para quem vive intensamente cada experiência.</p>
+        <div class="cat-count">2 cursos disponíveis</div>
+      </div>
+      <div class="cat-card rv d4">
+        <div class="cat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Via Universitária</h3>
+        <p>PROuniversitário: preparação intensiva para o acesso ao ensino superior público.</p>
+        <div class="cat-count">1 programa disponível</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY STATUS ════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-in">
+      <div class="why-photo rv-left">
+        <img src="https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?w=600&q=80&fit=crop&auto=format" alt="Jovens estudantes da STATUS" loading="lazy" />
+        <div class="why-photo-overlay"></div>
+      </div>
+      <div class="why-txt rv-right d2">
+        <span class="lbl inv">Porquê a STATUS</span>
+        <h2>Aprender fazendo. Não decorando.</h2>
+        <p>No primeiro ano já tens projetos no portefólio. No terceiro, já podes ter tido uma empresa a pagar pelo teu trabalho. É assim que funciona aqui.</p>
+        <a href="#formulario" class="btn btn-blue" style="margin-bottom:32px">Quero saber mais</a>
+        <div class="why-pts">
+          <div class="why-pt">
+            <h3>Quem te ensina trabalha na área</h3>
+            <p>Os nossos formadores não saíram da universidade para a sala de aula. Continuam a trabalhar. E isso faz toda a diferença.</p>
+          </div>
+          <div class="why-pt">
+            <h3>Portefólio antes do diploma</h3>
+            <p>Cada módulo termina com algo que podes mostrar. Não uma nota num papel. Um trabalho feito.</p>
+          </div>
+          <div class="why-pt">
+            <h3>12.º ano, mercado e universidade</h3>
+            <p>Sais com o 12.º ano reconhecido. Podes trabalhar ou ir para a universidade. Não és forçado a escolher agora.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CURSOS ════════════════════════════════════════ -->
+<section id="cursos">
+  <div class="container">
+    <div class="cursos-hdr">
+      <div class="cursos-hdr-l rv">
+        <span class="lbl">Cursos</span>
+        <h2>Os nossos cursos mais procurados</h2>
+      </div>
+      <div class="cursos-hdr-r rv d2">
+        <p>Todos os cursos têm equivalência ao 12.º ano e candidaturas abertas para 2025/2026.</p>
+        <a href="#formulario" class="btn-teal-outline">Ver todos os cursos</a>
+      </div>
+    </div>
+    <div class="cursos-grid">
+
+      <div class="ccard rv d1">
+        <div class="cthumb ct1">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80&fit=crop&auto=format" alt="Jovem a filmar com câmara" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>Multimédia</h3>
+          <p>Pegas numa câmara, num software de edição e numa ideia. No final do curso, tens um portefólio de verdade.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>3 Anos</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3100 horas</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Gratuito</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard rv d2">
+        <div class="cthumb ct2">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80&fit=crop&auto=format" alt="Jovem a programar no computador" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>App &amp; Mobile Developer</h3>
+          <p>Aprendes a criar apps do zero. Ao fim de três anos, sabes programar e tens projetos que funcionam no telemóvel de toda a gente.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>3 Anos</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3100 horas</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Gratuito</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard rv d3">
+        <div class="cthumb ct3">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&fit=crop&auto=format" alt="Jovem a criar conteúdo para redes sociais" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>Comunicação e Marketing</h3>
+          <p>Aprendes a criar campanhas, gerir redes sociais e contar histórias de marcas. O tipo de trabalho que não parece trabalho.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>3 Anos</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3100 horas</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Gratuito</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard rv d4">
+        <div class="cthumb ct4">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop&auto=format" alt="Evento jovens a organizar" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>Organização de Eventos</h3>
+          <p>Festivais, conferências, casamentos, lançamentos. Aprendes a pôr tudo a funcionar na hora certa, sem dramas.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>3 Anos</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3100 horas</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Gratuito</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard rv d1">
+        <div class="cthumb ct5">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80&fit=crop&auto=format" alt="Jovem atleta a treinar" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>Desporto</h3>
+          <p>Tens paixão pelo desporto? Aqui transformas isso numa profissão. Treino, gestão, animação, saúde. É tudo desporto.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>3 Anos</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3100 horas</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Gratuito</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard rv d2">
+        <div class="cthumb ct6">
+          <img src="https://images.unsplash.com/photo-1598981457915-aea220950616?w=600&q=80&fit=crop&auto=format" alt="Estudante a estudar para a universidade" loading="lazy" />
+          <div class="cthumb-overlay"></div>
+        </div>
+        <div class="cbody">
+          <h3>PROuniversitário</h3>
+          <p>Acabaste o profissional e queres ir para a universidade. Este curso prepara-te a sério, em um ano, sem stress acumulado de 3.</p>
+          <div class="cmeta">
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>1 Ano</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Intensivo</div>
+            <div class="cmi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vagas abertas</div>
+          </div>
+          <div class="cfoot">
+            <span class="cbadge">Preparação</span>
+            <button class="ccta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidatar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ══════════════════════════════════ -->
+<section id="howto">
+  <div class="container">
+    <div class="howto-in">
+      <div class="howto-l rv">
+        <span class="lbl">Como funciona</span>
+        <h2>Inscreve-te em 4 passos simples</h2>
+        <p>O processo de candidatura é rápido e sem complicações. Em menos de 48 horas tens uma resposta da nossa equipa.</p>
+      </div>
+      <div class="rv d2">
+        <div class="steps-box">
+          <div class="step act" onclick="setStep(this)">
+            <div class="step-tag"><span class="step-word">PASSO</span><span class="step-num">01</span></div>
+            <div class="step-info"><h3>Escolhe o teu curso</h3><p>Explora os 8 cursos disponíveis e encontra o que combina contigo.</p></div>
+            <span class="step-arr">›</span>
+          </div>
+          <div class="step" onclick="setStep(this)">
+            <div class="step-tag"><span class="step-word">PASSO</span><span class="step-num">02</span></div>
+            <div class="step-info"><h3>Candidata-te online</h3><p>Preenche o formulário nesta página. Demora menos de 5 minutos.</p></div>
+            <span class="step-arr">›</span>
+          </div>
+          <div class="step" onclick="setStep(this)">
+            <div class="step-tag"><span class="step-word">PASSO</span><span class="step-num">03</span></div>
+            <div class="step-info"><h3>Entrevista de seleção</h3><p>Conhecemo-nos numa conversa informal para perceber os teus objetivos.</p></div>
+            <span class="step-arr">›</span>
+          </div>
+          <div class="step" onclick="setStep(this)">
+            <div class="step-tag"><span class="step-word">PASSO</span><span class="step-num">04</span></div>
+            <div class="step-info"><h3>Começa o teu percurso PRO</h3><p>Em setembro arrancas com a tua formação e o teu futuro profissional.</p></div>
+            <span class="step-arr">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APOIOS (adapts Pricing) ═══════════════════════ -->
+<section id="apoios">
+  <div class="container">
+    <div class="apoios-hdr rv">
+      <span class="lbl" style="display:flex;justify-content:center">Apoios disponíveis</span>
+      <h2>Escolhe o teu apoio financeiro</h2>
+    </div>
+    <div class="apoios-grid">
+
+      <div class="apcard rv d1">
+        <div class="ap-badge">Apoio Social</div>
+        <div class="ap-title">Bolsa Escolar</div>
+        <div class="ap-value">ASE</div>
+        <div class="ap-period">Ação Social Escolar</div>
+        <p class="ap-desc">Apoio financeiro para alunos com carências económicas, incluindo alimentação, material escolar e transporte.</p>
+        <button class="ap-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Saber mais</button>
+        <div class="ap-feats">
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Alimentação subsidiada</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Apoio para material</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Transporte escolar</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Candidatura anual</div>
+        </div>
+      </div>
+
+      <div class="apcard hl rv d2">
+        <div class="ap-badge">Mais procurado</div>
+        <div class="ap-title">Formação Gratuita</div>
+        <div class="ap-value">€0</div>
+        <div class="ap-period">Financiada pelo Estado</div>
+        <p class="ap-desc">Todos os cursos profissionais são totalmente gratuitos. A formação é financiada pelo POCH e pelo Ministério da Educação.</p>
+        <button class="ap-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Candidata-te já</button>
+        <div class="ap-feats">
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Formação 100% gratuita</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Material incluído</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Equivalência ao 12.º ano</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Diploma certificado ANQEP</div>
+        </div>
+      </div>
+
+      <div class="apcard rv d3">
+        <div class="ap-badge">Internacional</div>
+        <div class="ap-title">Erasmus+</div>
+        <div class="ap-value">EU</div>
+        <div class="ap-period">Mobilidade europeia</div>
+        <p class="ap-desc">Subsídio para realizar estágio profissional em empresas europeias, com cobertura de viagem, alojamento e subsistência.</p>
+        <button class="ap-btn" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">Saber mais</button>
+        <div class="ap-feats">
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Viagem financiada</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Alojamento incluído</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Subsídio de vida</div>
+          <div class="ap-feat"><span class="ap-feat-dot"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></span>Certificado Europass</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ════════════════════════════════════ -->
+<section id="ctabanner">
+  <div class="cta-ilu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+  </div>
+  <div class="container">
+    <div class="ctabanner-txt rv">
+      <span class="lbl inv">Candidaturas 2025/2026</span>
+      <h2>Começa a tua jornada profissional hoje</h2>
+      <p>Vagas limitadas por curso. Candidata-te agora e a nossa equipa entra em contacto nas próximas 48 horas.</p>
+      <div class="cta-btns">
+        <a href="#formulario" class="btn btn-blue">Candidata-te agora</a>
+        <a href="tel:239991649" class="btn btn-white-outline">239 991 649</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════ -->
+<section id="testi">
+  <div class="container">
+    <div class="testi-hdr rv">
+      <span class="lbl" style="display:flex;justify-content:center">Testemunhos</span>
+      <h2>O que dizem os nossos alunos</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard rv d1">
+        <div class="tcard-q">"</div>
+        <p class="tcard-txt">A STATUS foi fundamental para o meu percurso. Aprendi a trabalhar com prazos e clientes reais. Hoje trabalho numa agência de comunicação em Coimbra e devo muito ao que aprendi aqui.</p>
+        <div class="tcard-bot">
+          <div>
+            <div class="tcard-name">Mariana Almeida</div>
+            <div class="tcard-role">Aluna</div>
+          </div>
+          <div class="tcard-av">MA</div>
+        </div>
+      </div>
+      <div class="tcard rv d2">
+        <div class="tcard-q">"</div>
+        <p class="tcard-txt">Saí da STATUS com um portefólio completo e a certeza do que quero fazer. O Erasmus+ foi a cereja no topo: estagiei em Berlim durante 3 meses e voltei com uma perspetiva completamente diferente.</p>
+        <div class="tcard-bot">
+          <div>
+            <div class="tcard-name">Tomás Silva</div>
+            <div class="tcard-role">Aluno</div>
+          </div>
+          <div class="tcard-av">TS</div>
+        </div>
+      </div>
+      <div class="tcard rv d3">
+        <div class="tcard-q">"</div>
+        <p class="tcard-txt">Os formadores tratam-nos como profissionais desde o primeiro dia. Entrei na universidade mais bem preparada do que muitos colegas que vieram de vias diferentes. A STATUS deu-me isso.</p>
+        <div class="tcard-bot">
+          <div>
+            <div class="tcard-name">Beatriz Ferreira</div>
+            <div class="tcard-role">Aluna</div>
+          </div>
+          <div class="tcard-av">BF</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-in">
+      <div class="faq-l rv">
+        <span class="lbl">FAQ</span>
+        <h2>Perguntas frequentes</h2>
+        <p>As respostas às dúvidas mais comuns sobre candidatura, cursos e vida na STATUS.</p>
+        <a href="#formulario" class="btn-teal-outline">Falar connosco</a>
+        <div class="faq-l-img">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        </div>
+      </div>
+      <div class="faq-list rv d2">
+        <div class="fq open">
+          <div class="fq-q" onclick="toggleFq(this)">Como me candidato à STATUS?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">Preenches o formulário nesta página. Em menos de 48 horas a nossa equipa entra em contacto para agendar uma conversa e dar seguimento à tua candidatura. É simples e gratuito.</div>
+        </div>
+        <div class="fq">
+          <div class="fq-q" onclick="toggleFq(this)">Quais são os requisitos de admissão?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">Para te candidatares precisas apenas de ter concluído o 9.º ano de escolaridade (ou estar a frequentá-lo). Não existem requisitos de notas mínimas. Queremos saber quem és e o que queres fazer.</div>
+        </div>
+        <div class="fq">
+          <div class="fq-q" onclick="toggleFq(this)">Os cursos têm equivalência ao 12.º ano?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">Sim. Todos os cursos profissionais conferem um diploma de nível IV equivalente ao 12.º ano, reconhecido em Portugal e na União Europeia. Podes trabalhar imediatamente ou candidatar-te ao ensino superior.</div>
+        </div>
+        <div class="fq">
+          <div class="fq-q" onclick="toggleFq(this)">A formação é mesmo gratuita?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">Sim, totalmente. Os cursos profissionais são financiados pelo Estado (POCH e Ministério da Educação). Não pagas propinas nem taxas de matrícula. Podes ainda candidatar-te a bolsa da Ação Social Escolar.</div>
+        </div>
+        <div class="fq">
+          <div class="fq-q" onclick="toggleFq(this)">O que é o Erasmus+ na STATUS?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">O Erasmus+ permite que os nossos alunos realizem estágios em empresas europeias com financiamento total: viagem, alojamento e subsídio de vida. É uma experiência transformadora que abre portas em toda a Europa.</div>
+        </div>
+        <div class="fq">
+          <div class="fq-q" onclick="toggleFq(this)">A escola fica na Lousã, posso ir de Coimbra?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="fq-a">Sim. Lousã fica a 30 minutos de Coimbra e existe transporte público regular. Muitos dos nossos alunos vêm de localidades próximas. Se precisares de apoio com alojamento, fala connosco e ajudamos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG / NEWS ═══════════════════════════════════ -->
+<section id="news">
+  <div class="container">
+    <div class="news-hdr rv">
+      <span class="lbl" style="display:flex;justify-content:center">Notícias</span>
+      <h2>Novidades da STATUS</h2>
+    </div>
+    <div class="news-grid">
+      <div class="ncard rv d1">
+        <div class="nthumb nt1">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80&fit=crop&auto=format" alt="Natureza e sustentabilidade" loading="lazy" />
+          <div class="ntag-wrap"><span class="ntag">Sustentabilidade</span></div>
+        </div>
+        <div class="nbody">
+          <div class="ndate">Janeiro 2025</div>
+          <h3>STATUS distinguida com galardão Eco-Escolas 2024</h3>
+          <p>Três anos seguidos com o mesmo prémio. A distinção Eco-Escolas reconhece o que os alunos da STATUS já fazem há muito: tomar a sério o mundo à volta deles.</p>
+        </div>
+      </div>
+      <div class="ncard rv d2">
+        <div class="nthumb nt2">
+          <img src="https://images.unsplash.com/photo-1776178320225-ce7d1f996f7c?w=600&q=80&fit=crop&auto=format" alt="Jovens em intercâmbio Erasmus" loading="lazy" />
+          <div class="ntag-wrap"><span class="ntag">Erasmus+</span></div>
+        </div>
+        <div class="nbody">
+          <div class="ndate">Março 2025</div>
+          <h3>Dez alunos foram estagiar para Berlim e Hamburgo</h3>
+          <p>Saíram da Lousã com uma mochila e voltaram com experiência real numa empresa alemã. É isso que o Erasmus+ faz. E a STATUS tem acesso a isso.</p>
+        </div>
+      </div>
+      <div class="ncard rv d3">
+        <div class="nthumb nt3">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80&fit=crop&auto=format" alt="Estudante com mochila a entrar na escola" loading="lazy" />
+          <div class="ntag-wrap"><span class="ntag">Candidaturas</span></div>
+        </div>
+        <div class="nbody">
+          <div class="ndate">Junho 2025</div>
+          <h3>Candidaturas 2025/2026 abertas. As vagas esgotam.</h3>
+          <p>São 8 cursos, são vagas limitadas e as candidaturas já estão a entrar. Se estás a pensar, é agora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMULÁRIO ════════════════════════════════════ -->
+<section id="formulario" style="background:var(--grey)">
+  <div class="container">
+    <div class="form-layout rv">
+      <div>
+        <span class="lbl">Candidaturas 2025/2026</span>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);margin-bottom:16px">Pronto para ser PRO?</h2>
+        <p style="color:var(--muted);font-size:.95rem;margin-bottom:32px">Preenche o formulário e a nossa equipa entra em contacto nas próximas 48 horas. É grátis e não te comprometes a nada.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0"></span>Resposta em menos de 48 horas</div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0"></span>Vagas limitadas por curso</div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0"></span>Formação 100% gratuita</div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0"></span>Equivalência ao 12.º ano incluída</div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0"></span>Erasmus+ disponível</div>
+        </div>
+      </div>
+      <div class="form-card" style="background:var(--white);border-radius:var(--r);padding:40px 36px;border:1.5px solid var(--border)">
+        <h3 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.3rem;color:var(--navy);margin-bottom:6px">Candidatura 2025/2026</h3>
+        <p style="color:var(--muted);font-size:.85rem;margin-bottom:28px">Preenche os campos abaixo. É rápido e gratuito.</p>
+        <form id="form2" onsubmit="submitForm2(event)" novalidate>
+          <div class="form-name-row">
+            <div><label style="display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px">Nome *</label><input type="text" required placeholder="Nome" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='#0E7A9A'" onblur="this.style.borderColor='#E8ECF0'" /></div>
+            <div><label style="display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px">Apelido *</label><input type="text" required placeholder="Apelido" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='#0E7A9A'" onblur="this.style.borderColor='#E8ECF0'" /></div>
+          </div>
+          <div style="margin-bottom:16px"><label style="display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px">Email *</label><input type="email" required placeholder="teu@email.com" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='#0E7A9A'" onblur="this.style.borderColor='#E8ECF0'" /></div>
+          <div style="margin-bottom:16px"><label style="display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px">Telefone</label><input type="tel" placeholder="9XX XXX XXX" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='#0E7A9A'" onblur="this.style.borderColor='#E8ECF0'" /></div>
+          <div style="margin-bottom:20px">
+            <label style="display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px">Curso de interesse *</label>
+            <select required style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;appearance:none;background:var(--white) url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%227%22 viewBox=%220 0 12 7%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%230B2545%22 stroke-width=%221.5%22 fill=%22none%22 stroke-linecap=%22round%22/%3E%3C/svg%3E') no-repeat right 14px center;padding-right:36px;cursor:pointer;transition:border-color .2s" onfocus="this.style.borderColor='#0E7A9A'" onblur="this.style.borderColor='#E8ECF0'">
+              <option value="">Escolhe um curso...</option>
+              <option>Multimédia</option>
+              <option>App &amp; Mobile Developer</option>
+              <option>Comunicação e Marketing</option>
+              <option>Desporto</option>
+              <option>Organização de Eventos</option>
+              <option>Animação Turística</option>
+              <option>Informática</option>
+              <option>PROuniversitário</option>
+              <option>Ainda não sei</option>
+            </select>
+          </div>
+          <button type="submit" style="width:100%;padding:15px;background:var(--navy);color:var(--white);font-weight:700;font-size:.95rem;border-radius:50px;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s" onmouseover="this.style.background='#0E7A9A'" onmouseout="this.style.background='#0B2545'">Enviar candidatura →</button>
+          <p style="text-align:center;font-size:.74rem;color:var(--muted);margin-top:12px">Os teus dados são confidenciais e usados apenas para processar a candidatura.</p>
+        </form>
+        <div id="form2Success" style="display:none;text-align:center;padding:40px 0">
+          <div style="width:64px;height:64px;border-radius:50%;background:#E8F8F2;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1DB880" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 style="font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:8px">Candidatura enviada!</h3>
+          <p style="color:var(--muted);font-size:.9rem">A nossa equipa entra em contacto nas próximas 48 horas. Obrigado pelo interesse na STATUS!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer id="foot">
+  <div class="foot-nl">
+    <div class="container">
+      <div class="foot-nl-in">
+        <div class="nl-txt">
+          <h3>Subscreve a nossa newsletter</h3>
+          <p>Recebe novidades sobre cursos, candidaturas e eventos da STATUS.</p>
+        </div>
+        <div class="nl-form">
+          <input type="email" class="nl-input" placeholder="O teu endereço de email" />
+          <button class="nl-btn">Subscrever</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-main">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/logo_status.png" alt="STATUS" />
+          <p>Escola Profissional Lousã. Formação profissional de nível IV que prepara jovens para o mercado de trabalho e o ensino superior. Desde 1991.</p>
+          <div class="foot-soc">
+            <a href="#" class="fs" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="fs" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://pt.linkedin.com/company/statusescola" class="fs" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Cursos</h4>
+          <ul>
+            <li><a href="#cursos">Multimédia</a></li>
+            <li><a href="#cursos">App &amp; Mobile</a></li>
+            <li><a href="#cursos">Comunicação</a></li>
+            <li><a href="#cursos">Desporto</a></li>
+            <li><a href="#cursos">Eventos</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Segue-nos</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="https://pt.linkedin.com/company/statusescola" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contacto</h4>
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.95-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:239991649">239 991 649</a>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:geral@status.edu.pt">geral@status.edu.pt</a>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rua Dr. Henrique Figueiredo<br/>3200-241 Lousã</span>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <p>© 2025 STATUS — Escola Profissional Lousã. Todos os direitos reservados.</p>
+        <span class="foot-hash">#QueroSerPro</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JS ════════════════════════════════════════════ -->
+<script>
+/* Mobile nav */
+document.getElementById('burger').addEventListener('click',()=>document.getElementById('mobNav').classList.toggle('open'));
+function closeMob(){document.getElementById('mobNav').classList.remove('open')}
+
+/* Sticky shadow */
+window.addEventListener('scroll',()=>{
+  document.getElementById('hdr').style.boxShadow=window.scrollY>8?'0 2px 16px rgba(11,37,69,.12)':'0 1px 0 #E8ECF0';
+});
+
+/* Scroll reveal */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(el=>obs.observe(el));
+
+/* Partner badges sequential reveal */
+document.querySelectorAll('.pt-badge').forEach(el=>{
+  el.classList.add('rv');obs.observe(el);
+});
+
+/* Steps interaction */
+function setStep(el){
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('act'));
+  el.classList.add('act');
+}
+
+/* FAQ toggle */
+function toggleFq(el){
+  const item=el.parentElement;
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.fq').forEach(f=>f.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+/* Form submit */
+function submitForm2(e){
+  e.preventDefault();
+  const form=document.getElementById('form2');
+  const success=document.getElementById('form2Success');
+  const req=form.querySelectorAll('[required]');
+  let ok=true;
+  req.forEach(f=>{f.style.borderColor='';if(!f.value.trim()){f.style.borderColor='#E53E3E';ok=false}});
+  if(!ok)return;
+  const btn=form.querySelector('button[type=submit]');
+  btn.textContent='A enviar...';btn.disabled=true;
+  setTimeout(()=>{form.style.display='none';success.style.display='block'},900);
+}
+
+/* Smooth anchor with header offset */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(!t)return;e.preventDefault();
+    window.scrollTo({top:t.offsetTop-88,behavior:'smooth'});
+  });
+});
+
+/* Counter animation for about stats */
+function animateCount(el){
+  const target=parseInt(el.dataset.count);
+  if(!target)return;
+  let start=0;const dur=1200;const step=16;
+  const inc=target/(dur/step);
+  const timer=setInterval(()=>{
+    start=Math.min(start+inc,target);
+    el.textContent=Math.floor(start).toLocaleString('pt');
+    if(start>=target)clearInterval(timer);
+  },step);
+}
+const cObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCount(e.target);cObs.unobserve(e.target)}});
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
+</script>
+</body>
+</html>

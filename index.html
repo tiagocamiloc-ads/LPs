@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STATUS — Escola Profissional Lousã | Candidaturas 2025/2026</title>
+  <meta name="description" content="Inscreve-te nos cursos profissionais da STATUS — Escola Profissional Lousã. Candidaturas abertas para 2025/2026. #QueroSerPro" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --blue-light: #B8E4F0;
+      --navy:       #0B2545;
+      --teal:       #0E7A9A;
+      --white:      #FFFFFF;
+      --grey:       #F4F6F8;
+      --text:       #1A1A2E;
+      --text-muted: #5a6a7e;
+      --radius:     16px;
+      --radius-sm:  8px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; line-height: 0.95; letter-spacing: 0.02em; }
+    h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1; letter-spacing: 0.02em; }
+    h3 { font-size: 1.1rem; font-weight: 700; }
+    p  { line-height: 1.65; }
+
+    /* ─── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; }
+
+    /* ─── BUTTONS ─────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; transition: transform 0.18s, box-shadow 0.18s; border: none;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+    .btn-navy  { background: var(--navy); color: var(--white); }
+    .btn-teal  { background: var(--teal); color: var(--white); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+    .btn-outline:hover { background: var(--white); color: var(--navy); box-shadow: none; }
+
+    /* ─── SECTION LABELS ─────────────────────────────── */
+    .section-label {
+      display: inline-block;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal);
+      background: rgba(14,122,154,0.1); padding: 6px 14px;
+      border-radius: 100px; margin-bottom: 16px;
+    }
+    .section-label.on-dark { color: var(--blue-light); background: rgba(184,228,240,0.15); }
+
+    /* ═══════════════════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════════════════ */
+    #header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      box-shadow: 0 1px 0 rgba(11,37,69,0.08);
+      transition: box-shadow 0.2s;
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .header-logo img { height: 44px; width: auto; }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 600; color: var(--navy);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .header-cta { display: flex; align-items: center; gap: 12px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.25s; }
+
+    /* ═══════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════ */
+    #hero {
+      background: var(--blue-light);
+      position: relative; overflow: hidden;
+      padding: 0;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 48px;
+      min-height: calc(100vh - 72px);
+      padding: 80px 24px;
+      max-width: 1180px; margin: 0 auto;
+    }
+    .hero-text { position: relative; z-index: 2; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--navy); color: var(--blue-light);
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-tag span { width: 6px; height: 6px; background: #4ECDC4; border-radius: 50%; }
+    .hero-headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.92; color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .hero-headline em { color: var(--teal); font-style: normal; display: block; }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--navy); opacity: 0.75;
+      max-width: 460px; margin-bottom: 40px; line-height: 1.6;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-link {
+      font-weight: 600; color: var(--navy); font-size: 0.95rem;
+      display: flex; align-items: center; gap: 6px;
+      opacity: 0.8; transition: opacity 0.15s;
+    }
+    .hero-link:hover { opacity: 1; }
+    .hero-visual {
+      position: relative; z-index: 2;
+      display: flex; justify-content: center; align-items: center;
+    }
+    /* Blob + cursor pixel art */
+    .hero-blob-wrap {
+      position: relative; width: 100%; max-width: 480px;
+    }
+    .hero-blob-wrap svg.blob { width: 100%; height: auto; }
+
+    /* Background blobs */
+    .bg-blob-1 {
+      position: absolute; top: -60px; right: -80px;
+      width: 340px; height: 340px; z-index: 0;
+      opacity: 0.45;
+    }
+    .bg-blob-2 {
+      position: absolute; bottom: -80px; left: -60px;
+      width: 260px; height: 260px; z-index: 0;
+      opacity: 0.3;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       STATS
+    ═══════════════════════════════════════════════════ */
+    #stats { background: var(--navy); padding: 64px 0; }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--blue-light); line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.88rem; color: rgba(255,255,255,0.6);
+      font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .stat-icon { margin: 0 auto 12px; width: 36px; height: 36px; color: var(--teal); }
+
+    /* ═══════════════════════════════════════════════════
+       CURSOS
+    ═══════════════════════════════════════════════════ */
+    #cursos { background: var(--white); }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 { color: var(--navy); }
+    .section-header p { color: var(--text-muted); max-width: 520px; margin: 12px auto 0; font-size: 1.05rem; }
+    .cursos-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .curso-card {
+      background: var(--grey); border-radius: var(--radius);
+      padding: 28px 24px; border: 2px solid transparent;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      cursor: default;
+    }
+    .curso-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 12px 32px rgba(14,122,154,0.12);
+      transform: translateY(-4px);
+    }
+    .curso-icon {
+      width: 52px; height: 52px; background: var(--navy);
+      border-radius: 12px; display: flex; align-items: center;
+      justify-content: center; margin-bottom: 20px;
+    }
+    .curso-icon svg { width: 26px; height: 26px; color: var(--blue-light); }
+    .curso-tag {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 8px; display: block;
+    }
+    .curso-card h3 { color: var(--navy); margin-bottom: 10px; font-size: 1rem; }
+    .curso-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.55; }
+    .curso-link {
+      font-size: 0.85rem; font-weight: 700; color: var(--teal);
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: gap 0.15s;
+    }
+    .curso-card:hover .curso-link { gap: 10px; }
+
+    /* ═══════════════════════════════════════════════════
+       POR QUE STATUS
+    ═══════════════════════════════════════════════════ */
+    #porque { background: var(--blue-light); position: relative; overflow: hidden; }
+    .porque-bg-blob {
+      position: absolute; right: -100px; top: 50%;
+      transform: translateY(-50%); width: 420px; opacity: 0.25; pointer-events: none;
+    }
+    .porque-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .porque-text h2 { color: var(--navy); margin-bottom: 20px; }
+    .porque-text p { color: var(--navy); opacity: 0.75; font-size: 1.05rem; margin-bottom: 32px; }
+    .porque-features { display: flex; flex-direction: column; gap: 24px; }
+    .feature-item { display: flex; gap: 20px; align-items: flex-start; }
+    .feature-icon {
+      flex-shrink: 0; width: 48px; height: 48px;
+      background: var(--navy); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature-icon svg { width: 22px; height: 22px; color: var(--blue-light); }
+    .feature-body h3 { color: var(--navy); margin-bottom: 6px; }
+    .feature-body p { color: var(--navy); opacity: 0.7; font-size: 0.9rem; }
+
+    /* ═══════════════════════════════════════════════════
+       METODOLOGIA
+    ═══════════════════════════════════════════════════ */
+    #metodologia { background: var(--white); }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute; top: 36px; left: calc(16.6% + 24px); right: calc(16.6% + 24px);
+      height: 2px; background: var(--blue-light); z-index: 0;
+    }
+    .step-item { text-align: center; padding: 0 32px; position: relative; z-index: 1; }
+    .step-num {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; position: relative; z-index: 2;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 0 3px var(--blue-light);
+    }
+    .step-item h3 { color: var(--navy); margin-bottom: 10px; }
+    .step-item p { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ═══════════════════════════════════════════════════
+       TESTEMUNHOS
+    ═══════════════════════════════════════════════════ */
+    #testemunhos { background: var(--navy); }
+    #testemunhos .section-header h2 { color: var(--white); }
+    #testemunhos .section-header p { color: rgba(255,255,255,0.55); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.06); border-radius: var(--radius);
+      padding: 32px 28px; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .testimonial-stars { color: #F5C842; font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-text {
+      color: rgba(255,255,255,0.85); font-size: 0.95rem;
+      line-height: 1.7; margin-bottom: 28px; font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .testimonial-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--teal); display: flex; align-items: center;
+      justify-content: center; font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem; color: var(--white); flex-shrink: 0;
+    }
+    .testimonial-name { font-weight: 700; color: var(--white); font-size: 0.9rem; }
+    .testimonial-course { font-size: 0.8rem; color: var(--blue-light); margin-top: 2px; }
+
+    /* ═══════════════════════════════════════════════════
+       FAQ
+    ═══════════════════════════════════════════════════ */
+    #faq { background: var(--grey); }
+    .faq-wrap { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white); border-radius: var(--radius-sm);
+      margin-bottom: 12px; overflow: hidden;
+      border: 1px solid rgba(11,37,69,0.08);
+    }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 24px; cursor: pointer;
+      font-weight: 600; color: var(--navy); font-size: 0.97rem;
+      gap: 16px; user-select: none;
+    }
+    .faq-q:hover { color: var(--teal); }
+    .faq-icon {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--blue-light); display: flex; align-items: center;
+      justify-content: center; transition: transform 0.25s, background 0.25s;
+    }
+    .faq-icon svg { width: 14px; height: 14px; color: var(--navy); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--navy); }
+    .faq-item.open .faq-icon svg { color: var(--white); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 24px;
+      color: var(--text-muted); font-size: 0.93rem; line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 22px; }
+
+    /* ═══════════════════════════════════════════════════
+       FORMULÁRIO / CTA
+    ═══════════════════════════════════════════════════ */
+    #formulario {
+      background: var(--navy);
+      position: relative; overflow: hidden;
+    }
+    .form-bg-blob-1 {
+      position: absolute; top: -80px; right: -60px;
+      width: 320px; opacity: 0.12; pointer-events: none;
+    }
+    .form-bg-blob-2 {
+      position: absolute; bottom: -60px; left: -80px;
+      width: 260px; opacity: 0.1; pointer-events: none;
+    }
+    .form-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start; position: relative; z-index: 2;
+    }
+    .form-copy h2 { color: var(--white); margin-bottom: 16px; }
+    .form-copy p { color: rgba(255,255,255,0.65); font-size: 1.05rem; margin-bottom: 32px; line-height: 1.65; }
+    .form-perks { display: flex; flex-direction: column; gap: 14px; }
+    .perk {
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.8); font-size: 0.9rem;
+    }
+    .perk-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; }
+    .form-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 40px 36px;
+    }
+    .form-card h3 { color: var(--navy); font-size: 1.3rem; margin-bottom: 8px; }
+    .form-card p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 28px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block; font-size: 0.82rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 6px; letter-spacing: 0.02em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid rgba(11,37,69,0.15); border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif; font-size: 0.93rem; color: var(--text);
+      background: var(--white); outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(14,122,154,0.12);
+    }
+    .form-group select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230B2545' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    .form-group textarea { resize: none; height: 88px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-submit { width: 100%; padding: 16px; font-size: 1rem; font-weight: 700; font-family: 'Inter', sans-serif; background: var(--navy); color: var(--white); border: none; border-radius: var(--radius-sm); cursor: pointer; transition: background 0.2s, transform 0.18s, box-shadow 0.18s; margin-top: 4px; }
+    .form-submit:hover { background: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,122,154,0.3); }
+    .form-note { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 12px; }
+    .form-success {
+      display: none; text-align: center; padding: 40px 0;
+    }
+    .form-success-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #E8F8F2; display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px;
+    }
+    .form-success-icon svg { width: 32px; height: 32px; color: #1DB880; }
+    .form-success h3 { color: var(--navy); margin-bottom: 8px; }
+    .form-success p { color: var(--text-muted); font-size: 0.93rem; }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    #footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08); padding: 56px 0 32px; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand img { height: 40px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+    .footer-brand p { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.65; max-width: 280px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 20px; }
+    .social-link {
+      width: 38px; height: 38px; border-radius: 8px;
+      background: rgba(255,255,255,0.08); display: flex; align-items: center;
+      justify-content: center; transition: background 0.2s;
+    }
+    .social-link:hover { background: var(--teal); }
+    .social-link svg { width: 18px; height: 18px; color: var(--white); }
+    .footer-col h4 {
+      color: var(--white); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.5); font-size: 0.88rem;
+      transition: color 0.15s;
+    }
+    .footer-col ul li a:hover { color: var(--blue-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px; display: flex;
+      justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.82rem; }
+    .hashtag { color: var(--blue-light); font-weight: 700; }
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE NAV
+    ═══════════════════════════════════════════════════ */
+    .mobile-nav {
+      display: none; flex-direction: column; gap: 0;
+      background: var(--white); border-top: 1px solid rgba(11,37,69,0.08);
+      padding: 0;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 16px 24px; font-weight: 600; color: var(--navy);
+      border-bottom: 1px solid rgba(11,37,69,0.06); font-size: 0.95rem;
+    }
+    .mobile-nav a:hover { color: var(--teal); }
+    .mobile-nav .btn { margin: 16px 24px; display: block; text-align: center; }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .cursos-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .nav-links, .header-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; min-height: auto; padding: 56px 24px 48px; }
+      .hero-visual { display: none; }
+      .hero-headline { font-size: clamp(3.5rem, 14vw, 5.5rem); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .cursos-grid { grid-template-columns: 1fr; }
+      .porque-inner { grid-template-columns: 1fr; gap: 48px; }
+      .porque-bg-blob { display: none; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .steps-grid::before { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .form-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-headline { font-size: clamp(3rem, 16vw, 4.5rem); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="header-logo">
+        <img src="assets/logo_status.png" alt="STATUS — Escola Profissional Lousã" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#porque">Sobre</a></li>
+          <li><a href="#testemunhos">Testemunhos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#formulario" class="btn btn-navy">Inscreve-te</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#cursos" onclick="closeMobileNav()">Cursos</a>
+    <a href="#porque" onclick="closeMobileNav()">Sobre</a>
+    <a href="#testemunhos" onclick="closeMobileNav()">Testemunhos</a>
+    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="#formulario" class="btn btn-navy" onclick="closeMobileNav()">Inscreve-te</a>
+  </nav>
+</header>
+
+<!-- ═══ HERO ══════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Background blobs -->
+  <svg class="bg-blob-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#0B2545" d="M44.7,-62.3C57.9,-53.2,68.6,-39.4,73.3,-23.6C78,-7.8,76.7,10,70.6,25.9C64.5,41.7,53.6,55.5,39.7,63.5C25.8,71.5,8.9,73.7,-6.6,71.7C-22.1,69.7,-36.2,63.5,-48.4,53.5C-60.6,43.5,-70.9,29.7,-74.1,14.3C-77.4,-1.1,-73.7,-18.1,-65.1,-32.1C-56.5,-46.1,-43.1,-57.1,-28.8,-65.6C-14.5,-74.1,0.7,-80.1,14.8,-77.3C28.9,-74.5,31.6,-71.4,44.7,-62.3Z" transform="translate(100 100)" />
+  </svg>
+  <svg class="bg-blob-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#0E7A9A" d="M39.5,-51.1C50.6,-43.5,58.7,-30.5,62.2,-15.9C65.7,-1.3,64.6,14.9,57.7,27.7C50.8,40.5,38.1,49.9,23.8,56.7C9.5,63.5,-6.4,67.7,-20.3,63.4C-34.2,59.1,-46.1,46.3,-53.6,31.2C-61.1,16.1,-64.2,-1.3,-60.5,-17.1C-56.8,-32.9,-46.3,-47.1,-33.3,-54.6C-20.3,-62.1,-4.8,-62.9,8.7,-59.6C22.2,-56.3,28.4,-58.7,39.5,-51.1Z" transform="translate(100 100)" />
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">
+        <span></span>
+        Candidaturas abertas 2025/2026
+      </div>
+      <h1 class="hero-headline display">
+        Já és<br/>
+        <em>PRO.</em><br/>
+        Só ainda<br/>
+        não sabes.
+      </h1>
+      <p class="hero-sub">
+        Inscreve-te num curso profissional na STATUS e começa a construir o futuro que mereces. 8 cursos, formação real, caminho garantido.
+      </p>
+      <div class="hero-btns">
+        <a href="#formulario" class="btn btn-navy">Inscreve-te agora</a>
+        <a href="#cursos" class="hero-link">
+          Conhece os cursos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3l5 5-5 5M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-blob-wrap">
+        <!-- Pixel cursor SVG (referência ao post) -->
+        <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração STATUS">
+          <!-- Main blob -->
+          <path d="M210,30 C310,30 390,110 390,210 C390,290 330,370 210,370 C90,370 30,290 30,210 C30,110 110,30 210,30Z" fill="#0B2545" opacity="0.9"/>
+          <!-- Inner blob shape -->
+          <path d="M210,70 C290,70 350,130 350,210 C350,280 300,340 210,340 C120,340 70,280 70,210 C70,130 130,70 210,70Z" fill="#0E7A9A" opacity="0.4"/>
+          <!-- Pixel cursor -->
+          <g transform="translate(130, 130)">
+            <rect x="0" y="0" width="12" height="12" fill="white"/>
+            <rect x="0" y="12" width="12" height="12" fill="white"/>
+            <rect x="12" y="12" width="12" height="12" fill="white"/>
+            <rect x="0" y="24" width="12" height="12" fill="white"/>
+            <rect x="12" y="24" width="12" height="12" fill="white"/>
+            <rect x="24" y="24" width="12" height="12" fill="white"/>
+            <rect x="0" y="36" width="12" height="12" fill="white"/>
+            <rect x="24" y="36" width="12" height="12" fill="white"/>
+            <rect x="48" y="36" width="12" height="12" fill="white"/>
+            <rect x="12" y="48" width="12" height="12" fill="white"/>
+            <rect x="24" y="48" width="12" height="12" fill="white"/>
+            <rect x="36" y="60" width="12" height="12" fill="white"/>
+            <rect x="48" y="72" width="12" height="12" fill="white"/>
+            <rect x="36" y="72" width="12" height="12" fill="#B8E4F0"/>
+          </g>
+          <!-- Hashtag text -->
+          <text x="210" y="310" font-family="'Bebas Neue', sans-serif" font-size="28" fill="white" text-anchor="middle" opacity="0.7">#QUERO SER PRO</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Anos de história</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="stat-num">8</div>
+        <div class="stat-label">Cursos profissionais</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Integração profissional</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="stat-num">Erasmus+</div>
+        <div class="stat-label">Mobilidade internacional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CURSOS ════════════════════════════════════════════ -->
+<section id="cursos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">O que queres ser?</span>
+      <h2>Os nossos cursos</h2>
+      <p>8 cursos profissionais com equivalência ao 12.º ano e saída direta para o mercado de trabalho ou universidade.</p>
+    </div>
+    <div class="cursos-grid">
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Multimédia</h3>
+        <p>Vídeo, design gráfico, fotografia e produção digital. Cria conteúdo que marca.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>App &amp; Mobile Developer</h3>
+        <p>Desenvolve aplicações móveis e web. O futuro cabe num ecrã.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Comunicação e Marketing</h3>
+        <p>Estratégia, redes sociais, publicidade e gestão de marca. Faz as marcas brilhar.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6.5 6.5a6 6 0 1 0 11 0 6 6 0 0 0-11 0"/><path d="M12 16v2m0 4h.01M4.2 6.2L2.8 4.8M21.2 6.2l1.4-1.4M12 2V.5"/><path d="M3 14H2M22 14h-1"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Desporto</h3>
+        <p>Treino desportivo, gestão e animação. Para quem vive o desporto a sério.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Organização de Eventos</h3>
+        <p>Planeia e executa eventos que ficam na memória. Do conceito ao dia do evento.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/><circle cx="18" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="12" r="1" fill="currentColor"/><circle cx="14" cy="18" r="1" fill="currentColor"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Animação Turística</h3>
+        <p>Turismo, animação cultural e lazer. Transforma destinos em experiências únicas.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="16" rx="2"/><path d="M6 20h12M12 16v4"/><path d="M6 8h.01M10 8h4"/></svg>
+        </div>
+        <span class="curso-tag">3 anos</span>
+        <h3>Informática</h3>
+        <p>Redes, sistemas e suporte técnico. A base de toda a tecnologia moderna.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="curso-tag">Preparação</span>
+        <h3>PROuniversitário</h3>
+        <p>Preparação intensiva para o acesso ao ensino superior. Do profissional à universidade.</p>
+        <a href="#formulario" class="curso-link">Candidatar-me →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POR QUE STATUS ════════════════════════════════════ -->
+<section id="porque">
+  <svg class="porque-bg-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#0B2545" d="M44.7,-62.3C57.9,-53.2,68.6,-39.4,73.3,-23.6C78,-7.8,76.7,10,70.6,25.9C64.5,41.7,53.6,55.5,39.7,63.5C25.8,71.5,8.9,73.7,-6.6,71.7C-22.1,69.7,-36.2,63.5,-48.4,53.5C-60.6,43.5,-70.9,29.7,-74.1,14.3C-77.4,-1.1,-73.7,-18.1,-65.1,-32.1C-56.5,-46.1,-43.1,-57.1,-28.8,-65.6C-14.5,-74.1,0.7,-80.1,14.8,-77.3C28.9,-74.5,31.6,-71.4,44.7,-62.3Z" transform="translate(100 100)" />
+  </svg>
+  <div class="container">
+    <div class="porque-inner">
+      <div class="porque-text">
+        <span class="section-label">Os nossos diferenciais</span>
+        <h2>Mais do que uma escola</h2>
+        <p>Na STATUS não aprendes apenas teoria. Trabalhas em projetos reais, com empresas reais, para um futuro real.</p>
+        <a href="#formulario" class="btn btn-navy">Quero ser PRO</a>
+      </div>
+      <div class="porque-features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="feature-body">
+            <h3>Aprendizagem real</h3>
+            <p>Projetos com parceiros e empresas reais desde o primeiro ano. O teu portefólio começa agora.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="feature-body">
+            <h3>Mobilidade internacional</h3>
+            <p>Programas Erasmus+ que te levam a trabalhar e aprender noutros países europeus.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="feature-body">
+            <h3>Caminho garantido</h3>
+            <p>Equivalência ao 12.º ano incluída. Sais a trabalhar ou entras na universidade. Tu escolhes.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="feature-body">
+            <h3>Turma pequena, atenção total</h3>
+            <p>Formadores dedicados que te conhecem pelo nome e acompanham o teu percurso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METODOLOGIA ═══════════════════════════════════════ -->
+<section id="metodologia">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Como funciona</span>
+      <h2>3 passos para o teu futuro</h2>
+      <p>O processo de candidatura é simples. Em dias tens uma resposta.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <h3>Candidata-te</h3>
+        <p>Preenche o formulário online ou vem pessoalmente à escola. Demora menos de 5 minutos.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <h3>Entrevista e seleção</h3>
+        <p>Conhecemo-nos numa conversa informal. Queremos perceber os teus objetivos e como te podemos ajudar.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <h3>Começa a tua vida PRO</h3>
+        <p>Formação de 3 anos, projetos reais e uma rede de contactos que dura para sempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTEMUNHOS ═══════════════════════════════════════ -->
+<section id="testemunhos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label on-dark">O que dizem os nossos alunos</span>
+      <h2>Histórias de sucesso</h2>
+      <p>Não digas que não podes. Os nossos ex-alunos dizem que conseguiram.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"A STATUS foi fundamental para o meu percurso. Aprendi a trabalhar em equipa, a cumprir prazos e a criar conteúdo que as pessoas realmente vêem. Hoje trabalho numa agência de comunicação."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MA</div>
+          <div>
+            <div class="testimonial-name">Mariana A.</div>
+            <div class="testimonial-course">Comunicação e Marketing</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Fui para a STATUS sem saber bem o que queria. Saí com um portefólio, experiência real e a certeza de que quero continuar na área do multimédia. O Erasmus+ foi a cereja no topo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TS</div>
+          <div>
+            <div class="testimonial-name">Tomás S.</div>
+            <div class="testimonial-course">Multimédia</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"O que aprendi na STATUS abriu-me portas que nem imaginava. Os formadores tratam-nos como profissionais desde o primeiro dia. Hoje estou na universidade e sinto que cheguei bem preparada."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">BF</div>
+          <div>
+            <div class="testimonial-name">Beatriz F.</div>
+            <div class="testimonial-course">PROuniversitário</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Tens dúvidas?</span>
+      <h2>Perguntas frequentes</h2>
+      <p>As respostas às questões mais comuns sobre candidatura e vida na STATUS.</p>
+    </div>
+    <div class="faq-wrap">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Quais são os requisitos de admissão?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">Para te candidatares precisas de ter concluído o 9.º ano de escolaridade (ou estar a frequentá-lo). Não existem requisitos de notas mínimas. O que importa é a tua vontade de aprender e crescer.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Quando abrem as candidaturas?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">As candidaturas para o ano letivo 2025/2026 já estão abertas. Preenche o formulário nesta página e entraremos em contacto nas próximas 48 horas para agendar a entrevista. As vagas são limitadas.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Os cursos têm equivalência ao 12.º ano?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">Sim. Todos os cursos profissionais conferem um diploma de nível IV (equivalente ao 12.º ano) reconhecido em Portugal e na União Europeia. Com ele podes trabalhar imediatamente ou candidatar-te ao ensino superior.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Posso candidatar-me a bolsas de estudo?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">Sim. Os alunos da STATUS podem candidatar-se a bolsas da Ação Social Escolar (ASE) através do Ministério da Educação. A escola apoia no processo de candidatura. Contacta-nos para mais informações.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          O que é o Erasmus+ na STATUS?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">O programa Erasmus+ permite que os alunos da STATUS realizem estágios em empresas europeias. É uma experiência de mobilidade totalmente financiada que inclui transporte, alojamento e subsídio de vida. Uma oportunidade única de crescer profissional e pessoalmente.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          A escola fica em Lousã. E se morar longe?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-a">Lousã fica a apenas 30 minutos de Coimbra e tem boas ligações de transporte. Se precisares de apoio com alojamento, fala connosco e ajudamos a encontrar solução. Muitos dos nossos alunos vêm de outras localidades.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMULÁRIO ════════════════════════════════════════ -->
+<section id="formulario">
+  <!-- Background blobs -->
+  <svg class="form-bg-blob-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#B8E4F0" d="M44.7,-62.3C57.9,-53.2,68.6,-39.4,73.3,-23.6C78,-7.8,76.7,10,70.6,25.9C64.5,41.7,53.6,55.5,39.7,63.5C25.8,71.5,8.9,73.7,-6.6,71.7C-22.1,69.7,-36.2,63.5,-48.4,53.5C-60.6,43.5,-70.9,29.7,-74.1,14.3C-77.4,-1.1,-73.7,-18.1,-65.1,-32.1C-56.5,-46.1,-43.1,-57.1,-28.8,-65.6C-14.5,-74.1,0.7,-80.1,14.8,-77.3C28.9,-74.5,31.6,-71.4,44.7,-62.3Z" transform="translate(100 100)" />
+  </svg>
+  <svg class="form-bg-blob-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#0E7A9A" d="M39.5,-51.1C50.6,-43.5,58.7,-30.5,62.2,-15.9C65.7,-1.3,64.6,14.9,57.7,27.7C50.8,40.5,38.1,49.9,23.8,56.7C9.5,63.5,-6.4,67.7,-20.3,63.4C-34.2,59.1,-46.1,46.3,-53.6,31.2C-61.1,16.1,-64.2,-1.3,-60.5,-17.1C-56.8,-32.9,-46.3,-47.1,-33.3,-54.6C-20.3,-62.1,-4.8,-62.9,8.7,-59.6C22.2,-56.3,28.4,-58.7,39.5,-51.1Z" transform="translate(100 100)" />
+  </svg>
+
+  <div class="container">
+    <div class="form-inner">
+      <div class="form-copy">
+        <span class="section-label on-dark">Candidaturas 2025/2026</span>
+        <h2>Pronto para ser PRO?</h2>
+        <p>Preenche o formulário e a nossa equipa entra em contacto contigo nas próximas 48 horas para dar seguimento à tua candidatura.</p>
+        <div class="form-perks">
+          <div class="perk"><span class="perk-dot"></span> Resposta em menos de 48 horas</div>
+          <div class="perk"><span class="perk-dot"></span> Vagas limitadas por curso</div>
+          <div class="perk"><span class="perk-dot"></span> Equivalência ao 12.º ano incluída</div>
+          <div class="perk"><span class="perk-dot"></span> Possibilidade de bolsa de estudo</div>
+          <div class="perk"><span class="perk-dot"></span> Erasmus+ disponível</div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Candidatura 2025/2026</h3>
+        <p>Preenche os campos abaixo. É grátis e não te comprometes a nada.</p>
+        <form id="inscricaoForm" onsubmit="submitForm(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="O teu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="apelido">Apelido *</label>
+              <input type="text" id="apelido" name="apelido" placeholder="O teu apelido" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="teu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="9XX XXX XXX" />
+          </div>
+          <div class="form-group">
+            <label for="curso">Curso de interesse *</label>
+            <select id="curso" name="curso" required>
+              <option value="">Escolhe um curso...</option>
+              <option value="multimedia">Multimédia</option>
+              <option value="app-mobile">App &amp; Mobile Developer</option>
+              <option value="comunicacao">Comunicação e Marketing</option>
+              <option value="desporto">Desporto</option>
+              <option value="eventos">Organização de Eventos</option>
+              <option value="turismo">Animação Turística</option>
+              <option value="informatica">Informática</option>
+              <option value="prouniversitario">PROuniversitário</option>
+              <option value="nao-sei">Ainda não sei, quero informação</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Alguma questão ou informação adicional..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar candidatura →</button>
+          <p class="form-note">Os teus dados são confidenciais e usados apenas para processar a candidatura.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Candidatura enviada!</h3>
+          <p>Recebemos a tua candidatura. A nossa equipa entra em contacto em menos de 48 horas. Obrigado pelo teu interesse na STATUS!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo_status.png" alt="STATUS" />
+        <p>Escola Profissional Lousã. Formação profissional de nível IV que prepara jovens para o mercado de trabalho e o ensino superior. Desde 1991.</p>
+        <div class="footer-socials">
+          <!-- Instagram -->
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://pt.linkedin.com/company/statusescola" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Cursos</h4>
+        <ul>
+          <li><a href="#cursos">Multimédia</a></li>
+          <li><a href="#cursos">App &amp; Mobile Developer</a></li>
+          <li><a href="#cursos">Comunicação e Marketing</a></li>
+          <li><a href="#cursos">Desporto</a></li>
+          <li><a href="#cursos">Organização de Eventos</a></li>
+          <li><a href="#cursos">Animação Turística</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Escola</h4>
+        <ul>
+          <li><a href="#porque">Sobre nós</a></li>
+          <li><a href="#testemunhos">Testemunhos</a></li>
+          <li><a href="#metodologia">Como funciona</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://status.edu.pt" target="_blank" rel="noopener">Website oficial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:239991649">239 991 649</a></li>
+          <li><a href="mailto:geral@status.edu.pt">geral@status.edu.pt</a></li>
+          <li><a href="https://maps.google.com/?q=Rua+Dr.+Henrique+Figueiredo,+3200-241+Lousã" target="_blank" rel="noopener">Rua Dr. Henrique Figueiredo<br/>3200-241 Lousã</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 STATUS — Escola Profissional Lousã. Todos os direitos reservados.</p>
+      <p class="hashtag">#QueroSerPro</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JS ════════════════════════════════════════════════ -->
+<script>
+  /* ── Mobile nav ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+  }
+
+  /* ── Sticky shadow ── */
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    header.style.boxShadow = window.scrollY > 8
+      ? '0 2px 16px rgba(11,37,69,0.12)'
+      : '0 1px 0 rgba(11,37,69,0.08)';
+  });
+
+  /* ── FAQ accordion ── */
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── Form submit ── */
+  function submitForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('inscricaoForm');
+    const success = document.getElementById('formSuccess');
+
+    /* Basic validation */
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      field.style.borderColor = '';
+      if (!field.value.trim()) {
+        field.style.borderColor = '#E53E3E';
+        valid = false;
+      }
+    });
+    if (!valid) return;
+
+    /* Simulate submission — replace with real endpoint */
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'A enviar...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }, 800);
+  }
+
+  /* ── Smooth anchor offset (account for sticky header) ── */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = document.getElementById('header').offsetHeight + 16;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
