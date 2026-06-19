@@ -296,9 +296,8 @@
     /* ══════════════════════════════════
        CTA BANNER
     ══════════════════════════════════ */
-    #ctabanner{position:relative;overflow:hidden;background:var(--navy);padding:88px 0}
-    .cta-ilu{position:absolute;right:0;top:0;height:100%;width:48%;background:linear-gradient(135deg,#0E7A9A,#1A3A6B 50%,#0B2545);clip-path:polygon(14% 0%,100% 0%,100% 100%,0% 100%);display:flex;align-items:center;justify-content:center}
-    .cta-ilu svg{width:80px;height:80px;color:rgba(184,228,240,.2)}
+    #ctabanner{position:relative;background:var(--navy) url('https://images.unsplash.com/photo-1776178320152-90f9bc841e7b?w=1800&q=80&fit=crop&auto=format') center/cover;background-attachment:fixed;padding:112px 0}
+    #ctabanner::before{content:'';position:absolute;inset:0;background:rgba(11,37,69,.78);z-index:1}
     .ctabanner-txt{position:relative;z-index:2;max-width:560px}
     .ctabanner-txt h2{font-size:clamp(2.5rem,6vw,5rem);color:var(--white);margin-bottom:14px}
     .ctabanner-txt p{color:rgba(255,255,255,.6);font-size:1rem;margin-bottom:32px;max-width:440px}
@@ -481,8 +480,7 @@
       .apoios-hdr{margin-bottom:36px}
 
       /* CTA Banner */
-      .cta-ilu{display:none}
-      #ctabanner{padding:56px 0}
+      #ctabanner{padding:72px 0;background-attachment:scroll}
       .ctabanner-txt h2{font-size:clamp(2rem,8vw,3.5rem)}
       .cta-btns{flex-direction:column;gap:12px}
       .cta-btns .btn{justify-content:center;width:100%}
@@ -992,9 +990,6 @@
 
 <!-- ═══ CTA BANNER ════════════════════════════════════ -->
 <section id="ctabanner">
-  <div class="cta-ilu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-  </div>
   <div class="container">
     <div class="ctabanner-txt rv">
       <span class="lbl inv">Candidaturas 2025/2026</span>
