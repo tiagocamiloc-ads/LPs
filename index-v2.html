@@ -189,14 +189,14 @@
     .sh h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);margin-bottom:10px}
     .sh p{color:var(--muted);font-size:.95rem;max-width:500px}
     .cats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .cat-card{border:1.5px solid var(--border);border-radius:var(--r);padding:28px;transition:all .25s;cursor:default}
-    .cat-card:hover{border-color:var(--teal);box-shadow:0 8px 32px rgba(14,122,154,.1);transform:translateY(-4px)}
-    .cat-ico{width:64px;height:64px;border-radius:16px;background:var(--grey);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .2s}
-    .cat-card:hover .cat-ico{background:var(--blue)}
-    .cat-ico svg{width:30px;height:30px;color:var(--teal)}
-    .cat-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:8px}
-    .cat-card p{font-size:.84rem;color:var(--muted);line-height:1.55}
-    .cat-count{font-size:.76rem;font-weight:700;color:var(--teal);margin-top:14px}
+    .cat-card{background:var(--navy);border:1.5px solid rgba(255,255,255,.08);border-radius:var(--r);padding:28px;transition:all .25s;cursor:default}
+    .cat-card:hover{border-color:rgba(14,122,154,.6);box-shadow:0 8px 32px rgba(11,37,69,.22);transform:translateY(-4px)}
+    .cat-ico{width:64px;height:64px;border-radius:16px;background:rgba(220,244,122,.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .2s}
+    .cat-card:hover .cat-ico{background:rgba(220,244,122,.22)}
+    .cat-ico svg{width:30px;height:30px;color:#DCF47A}
+    .cat-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:8px}
+    .cat-card p{font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.55}
+    .cat-count{font-size:.76rem;font-weight:700;color:#DCF47A;margin-top:14px}
 
     /* ══════════════════════════════════
        WHY STATUS (dark band)
@@ -464,8 +464,9 @@
       #why{padding:40px 0}
 
       /* Courses */
-      .cursos-hdr{flex-direction:column;align-items:flex-start;margin-bottom:32px;gap:12px}
-      .cursos-hdr-r p{text-align:left}
+      .cursos-hdr{flex-direction:column;align-items:center;text-align:center;margin-bottom:32px;gap:12px}
+      .cursos-hdr-r{align-items:center}
+      .cursos-hdr-r p{text-align:center}
       .cursos-hdr-l h2{max-width:100%}
       .cursos-grid{grid-template-columns:1fr}
       .cthumb{height:170px}
@@ -514,6 +515,14 @@
       .nl-btn{width:100%}
       .foot-grid{grid-template-columns:1fr;gap:28px}
       .foot-bot{flex-direction:column;text-align:center}
+
+      /* Mobile paragraph sizes */
+      .sh p,.about-txt p,.why-txt>p,.howto-l p,.faq-l p,.ctabanner-txt p{font-size:1.15rem;line-height:1.7}
+      .sh p{max-width:100%}
+      .ctabanner-txt p{max-width:100%}
+
+      /* Mobile centering — section headings */
+      .sh,.about-txt,.apoios-hdr,.news-hdr,.why-txt,.faq-l,.ctabanner-txt{text-align:center}
     }
 
     /* ══════════════════════════════════
